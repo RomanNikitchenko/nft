@@ -1,64 +1,162 @@
 .hero-section {
-  min-height: 400px;
-  padding-top: 118px;
-  padding-bottom: 118px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  background-color: $bg-color-hero;
-  // background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //   url(../images/mobile480.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  display: flex;
+  background-color: rgb(104, 190, 230);
+}
 
-  // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  //   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //     url(../images/mobile480@2x.jpg);
-  // }
+// .page-hero__conteiner{
+//   position: relative;
+//   width: 1200px;
+//   height: 600px;
+//   padding: 0;
+// }
 
-  // @media screen and (min-width: 768px) {
-  //   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //     url(../images/tablet768.jpg);
+.motion-container {
+  margin: auto;
+  position: relative;
+  width: 1200px;
+  height: 600px;
+  padding: 0;
+}
 
-  //   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  //     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //       url(../images/tablet768@2x.jpg);
-  //   }
-  // }
+.svg-path {
+  stroke: gray;
+  stroke-width: 4;
+  fill: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
-  // @media screen and (min-width: 1200px) {
-  //   max-width: 1600px;
-  //   min-height: 600px;
-  //   padding-top: 200px;
-  //   padding-bottom: 200px;
-  //   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //     url(../images/desktop1600.jpg);
+.box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  offset-path: path('M600 575C296.133 575 50 451.934 50 300S296.133 25 600 25c303.867 0 550 123.066 550 275S903.867 575 600 575z');
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  offset-rotate: 0deg;
+}
 
-  //   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  //     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-  //       url(../images/desktop1600@2x.jpg);
-  //   }
-  // }
+.motion-pause {
+  animation-play-state: paused;
+}
 
-  &__title {
-    margin: auto;
-    margin-bottom: 30px;
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.61;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: $text-color-white;
+.box-1 {
+  background: rgb(255, 102, 178);
+}
 
-    @media screen and (min-width: 480px) {
-      max-width: 360px;
-    }
+.box-2 {
+  background: rgb(255, 203, 105);
+}
 
-    @media screen and (min-width: 1200px) {
-      max-width: 696px;
-      font-size: 44px;
-      line-height: 1.36;
-    }
+.box-3 {
+  background: rgb(160, 255, 105);
+}
+
+.box-4 {
+  background: rgb(105, 255, 248);
+}
+
+.box-5 {
+  background: rgb(105, 120, 255);
+}
+
+.box-6 {
+  background: rgb(255, 101, 101);
+}
+
+
+/* animating object on path */
+.motion-move-1 {
+  animation-name: move1;
+}
+
+.motion-move-2 {
+  animation-name: move2;
+}
+
+.motion-move-3 {
+  animation-name: move3;
+}
+
+.motion-move-4 {
+  animation-name: move4;
+}
+
+.motion-move-5 {
+  animation-name: move5;
+}
+
+.motion-move-6 {
+  animation-name: move6;
+}
+
+@keyframes move1 {
+  0% {
+    offset-distance: 10%;
   }
+
+  100% {
+    offset-distance: 20%;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    offset-distance: 20%;
+  }
+
+  100% {
+    offset-distance: 30%;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    offset-distance: 30%;
+  }
+
+  100% {
+    offset-distance: 60%;
+  }
+}
+
+@keyframes move4 {
+  0% {
+    offset-distance: 60%;
+  }
+
+  100% {
+    offset-distance: 70%;
+  }
+}
+
+@keyframes move5 {
+  0% {
+    offset-distance: 70%;
+  }
+
+  100% {
+    offset-distance: 80%;
+  }
+}
+
+@keyframes move6 {
+  0% {
+    offset-distance: 80%;
+  }
+
+  100% {
+    offset-distance: 110%;
+  }
+}
+
+.btn {
+  position: absolute;
 }

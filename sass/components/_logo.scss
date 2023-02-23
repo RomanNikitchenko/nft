@@ -1,26 +1,12 @@
 .logo {
+  padding-top: 64px;
   font-family: Raleway, cursive;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 1.16;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 1;
   text-decoration: none;
-
-  @media screen and (min-width: 1200px) {
-    font-size: 26px;
-    line-height: 1.19;
-  }
-
-  &__accent {
-    color: $accent-color;
-  }
+  color: #000000;
 }
 
-.main-nav__logo {
-  margin-right: 88px;
-  @media screen and (min-width: 1200px) {
-    margin-right: 93px;
-  }
-}
-.main-nav__logo--color {
-  color: $text-color-blac;
-}
+

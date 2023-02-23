@@ -37,7 +37,7 @@ p {
   margin: 0;
   list-style: none;
 }
-.social-links {
+.list {
   @extend %list;
 }
 
@@ -58,8 +58,8 @@ p {
     width: 768px;
   }
 
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
+  @media screen and (min-width: 1560px) {
+    width: 1560px;
   }
 }
 .conteiner {

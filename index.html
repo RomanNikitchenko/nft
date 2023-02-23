@@ -18,7 +18,7 @@
             <!--раздел основной навигации-->
             <nav class="main-nav">
                 <!--логотип хедер-->
-                <a href="./index.html" class="logo main-nav__logo main-nav__logo--color">
+                <a href="./index.html" class="logo">
                     <span class="logo__accent">Drained Planet</span>
                 </a>
             </nav>
@@ -28,8 +28,31 @@
     <main>
         <!--Шапка-->
         <section class="hero-section">
-                <div class="conteiner page-header__conteiner">
-                    <h1 class="hero-section__title">Drained Planet</h1>
+                <div class="conteiner page-hero__conteiner">
+                    <div class="motion-container">
+                    
+                        <!-- drawing svg path -->
+                        <svg class="svg-path" xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
+                            <path id="svg_10"
+                                d="M600 575C296.133 575 50 451.934 50 300S296.133 25 600 25c303.867 0 550 123.066 550 275S903.867 575 600 575z"
+                                opacity="undefined" fill="none" />
+                        </svg>
+                    
+                        <!-- object to move -->
+                        <ul class="list">
+                            <li class="box box-1 motion-pause motion-move-1">1</li>
+                            <!-- <li class="box box-2 motion-pause motion-move-2">2</li>
+                            <li class="box box-3 motion-pause motion-move-3">3</li>
+                            <li class="box box-4 motion-pause motion-move-4">4</li>
+                            <li class="box box-5 motion-pause motion-move-5">5</li>
+                            <li class="box box-6 motion-pause motion-move-6">6</li> -->
+                        </ul>
+                    
+                    </div>
+                    
+                    <button type="button" class="btn">
+                        move
+                    </button>
                 </div>
         </section>
     </main>
@@ -73,7 +96,7 @@
         </div>
     </footer>
 
-    <script defer src="js/mobile-menu.js"></script>
+    <script src="js/task-14.js" type="module"></script>
 
 </body>
 

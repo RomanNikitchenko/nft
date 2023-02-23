@@ -1,9 +1,5 @@
 .page-header {
-  background-color: $text-color-white;
-  border-bottom: 1px solid $block-border-line;
-
   &__conteiner {
     display: flex;
-    align-items: center;
   }
 }
