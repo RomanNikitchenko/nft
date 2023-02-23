@@ -1,0 +1,16 @@
+@import './utils/variables';
+@import './base/normalize';
+@import './utils/placeholders';
+@import './utils/breakpoints';
+@import './utils/mixins';
+// header
+@import './components/page-header'; 
+@import './components/main-nav'; 
+@import './components/logo'; 
+// main
+@import './components/hero-section'; 
+@import './components/social-links'; 
+
+// footer
+@import './components/page-footer';
+@import './components/our-social-networks'; 

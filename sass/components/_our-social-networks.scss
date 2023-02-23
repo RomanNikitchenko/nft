@@ -1,0 +1,18 @@
+.our-social-networks {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
+
+.our-social-networks__titel {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
+.social-links__item--top {
+  margin-top: 20px;
+}
