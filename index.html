@@ -35,17 +35,15 @@
                         <svg class="svg-path" xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
                             <path id="svg_10"
                                 d="M600 575C296.133 575 50 451.934 50 300S296.133 25 600 25c303.867 0 550 123.066 550 275S903.867 575 600 575z"
-                                opacity="undefined" fill="none" />
+                                opacity="undefined" fill="none" stroke-width="1" stroke="gray"/>
                         </svg>
                     
                         <!-- object to move -->
                         <ul class="list">
-                            <li class="box box-1 motion-pause motion-move-1">1</li>
-                            <li class="box box-2 motion-pause motion-move-2">2</li>
-                            <li class="box box-3 motion-pause motion-move-3">3</li>
-                            <li class="box box-4 motion-pause motion-move-4">4</li>
-                            <li class="box box-5 motion-pause motion-move-5">5</li>
-                            <li class="box box-6 motion-pause motion-move-6">6</li>
+                            <li class="box green">1</li>
+                            <li class="box blue">1</li>
+                            <li class="box red">1</li>
+                            <li class="box yellow">1</li>
                         </ul>
                     
                     </div>
@@ -96,7 +94,56 @@
         </div>
     </footer>
 
-    <script src="js/task-14.js" type="module"></script>
+    <!-- <script src="js/task-14.js" type="module"></script> -->
+    <script src="js/anime.min.js"></script>
+
+    <script>
+        const btn = document.querySelector('.btn');
+
+        let disabled = false;
+
+        var path = anime.path('.svg-path path');
+
+        var animation = null
+
+        var addToPath = function (el, offset) {
+
+            animation = anime({
+                targets: el,
+                translateX: path('x'),
+                translateY: path('y'),
+                duration: 3000,
+                easing: 'linear',
+                loop: true,
+                autoplay: false
+            });
+
+            animation.seek(offset);
+            animation.play();
+        }
+
+        addToPath('.green', 50);
+        addToPath('.blue', 500);
+        addToPath('.red', 750);
+        addToPath('.yellow', 1500);
+
+
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+
+            if (disabled) return;
+            disabled = true;
+            setTimeout(() => {
+                disabled = false
+            }, 500);
+            
+            if (e.target.tagName !== 'BUTTON') return;
+
+            animation.play();
+        });
+
+
+    </script>
 
 </body>
 
