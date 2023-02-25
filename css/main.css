@@ -347,7 +347,30 @@ p {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+.box.motion-move-1 {
   background: #ff66b2;
+}
+
+.box.motion-move-2 {
+  background: #ffcb69;
+}
+
+.box.motion-move-3 {
+  background: #a0ff69;
+}
+
+.box.motion-move-4 {
+  background: #69fff8;
+}
+
+.box.motion-move-5 {
+  background: #6978ff;
+}
+
+.box.motion-move-6 {
+  background: #ff6565;
 }
 
 .social-links {

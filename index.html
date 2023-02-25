@@ -37,20 +37,24 @@
                                 d="M600 575C296.133 575 50 451.934 50 300S296.133 25 600 25c303.867 0 550 123.066 550 275S903.867 575 600 575z"
                                 opacity="undefined" fill="none" stroke-width="1" stroke="gray"/>
                         </svg>
-                    
+
                         <!-- object to move -->
                         <ul class="list">
-                            <li class="box green">1</li>
-                            <li class="box blue">1</li>
-                            <li class="box red">1</li>
-                            <li class="box yellow">1</li>
+                            <li class="box box-1 motion-pause motion-move-1">1</li>
+                            <li class="box box-2 motion-pause motion-move-2">2</li>
+                            <li class="box box-3 motion-pause motion-move-3">3</li>
+                            <li class="box box-4 motion-pause motion-move-4">4</li>
+                            <li class="box box-5 motion-pause motion-move-5">5</li>
+                            <li class="box box-6 motion-pause motion-move-6">6</li>
                         </ul>
                     
                     </div>
                     
-                    <button type="button" class="btn">
+                    <button type="button" class="btnMove">
                         move
                     </button>
+
+                    <div class="label visibilitychange-log">animation progress 0%</div>
                 </div>
         </section>
     </main>
@@ -98,51 +102,54 @@
     <script src="js/anime.min.js"></script>
 
     <script>
-        const btn = document.querySelector('.btn');
+        const btnMove = document.querySelector('.btnMove');
+        const visibilitychangeLogEl = document.querySelector('.visibilitychange-log');
 
         let disabled = false;
+        let limit = 1;
 
-        var path = anime.path('.svg-path path');
+        let animationGreen = anime({
+            targets: '.motion-move-1',
+            translateX: anime.path('.svg-path path')('x'),
+            translateY: anime.path('.svg-path path')('y'),
+            duration: 5000,
+            easing: 'easeInOutSine',
+            autoplay: false,
 
-        var animation = null
-
-        var addToPath = function (el, offset) {
-
-            animation = anime({
-                targets: el,
-                translateX: path('x'),
-                translateY: path('y'),
-                duration: 3000,
-                easing: 'linear',
-                loop: true,
-                autoplay: false
-            });
-
-            animation.seek(offset);
-            animation.play();
-        }
-
-        addToPath('.green', 50);
-        addToPath('.blue', 500);
-        addToPath('.red', 750);
-        addToPath('.yellow', 1500);
-
-
-        btn.addEventListener('click', e => {
-            e.preventDefault();
-
-            if (disabled) return;
-            disabled = true;
-            setTimeout(() => {
-                disabled = false
-            }, 500);
-            
-            if (e.target.tagName !== 'BUTTON') return;
-
-            animation.play();
+            update: function (a) {
+                visibilitychangeLogEl.innerHTML = 'animation progress ' + Math.round(a.progress) + '%';
+                if (Math.round(a.progress) === 25 && disabled === true && limit === 1) {
+                    animationGreen.pause();
+                    disabled = false;
+                    limit += 1;
+                }
+                if (Math.round(a.progress) === 50 && disabled === true && limit === 2) {
+                    animationGreen.pause();
+                    disabled = false;
+                    limit += 1;
+                }
+                if (Math.round(a.progress) === 75 && disabled === true && limit === 3) {
+                    animationGreen.pause();
+                    disabled = false;
+                    limit = 1;
+                }
+            },
+            complete: function () {
+                disabled = false;
+            }
         });
 
+        btnMove.addEventListener('click', e => {
+            e.preventDefault();
+            console.log(disabled);
 
+            if (disabled) return;
+
+            if (e.target.tagName !== 'BUTTON') return;
+
+            disabled = true;
+            animationGreen.play();
+        });
     </script>
 
 </body>
