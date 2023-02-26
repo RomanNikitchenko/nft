@@ -349,27 +349,27 @@ p {
   border-radius: 50%;
 }
 
-.box.motion-move-1 {
+.box.target-1 {
   background: #ff66b2;
 }
 
-.box.motion-move-2 {
+.box.target-2 {
   background: #ffcb69;
 }
 
-.box.motion-move-3 {
+.box.target-3 {
   background: #a0ff69;
 }
 
-.box.motion-move-4 {
+.box.target-4 {
   background: #69fff8;
 }
 
-.box.motion-move-5 {
+.box.target-5 {
   background: #6978ff;
 }
 
-.box.motion-move-6 {
+.box.target-6 {
   background: #ff6565;
 }
 

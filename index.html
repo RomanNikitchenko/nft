@@ -33,19 +33,34 @@
                     
                         <!-- drawing svg path -->
                         <svg class="svg-path" xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
-                            <path id="svg_10"
-                                d="M600 575C296.133 575 50 451.934 50 300S296.133 25 600 25c303.867 0 550 123.066 550 275S903.867 575 600 575z"
-                                opacity="undefined" fill="none" stroke-width="1" stroke="gray"/>
+                            <path id="svg_1"
+                                d="m599.99997,504.50003c-271.82319,0 -491.99998,-91.51658 -491.99998,-204.50001c0,-112.98343 220.17679,-204.50001 491.99998,-204.50001c271.82319,0 491.99998,91.51658 491.99998,204.50001c0,112.98343 -220.17679,204.50001 -491.99998,204.50001z"
+                                opacity="undefined" stroke="#000" fill="none" />
+                            <path id="svg_2"
+                                d="m600.00001,467.99999c-249.99998,0 -452.49996,-75.18232 -452.49996,-168.00001c0,-92.81768 202.49998,-168.00001 452.49996,-168.00001c249.99998,0 452.49996,75.18232 452.49996,168.00001c0,92.81768 -202.49998,168.00001 -452.49996,168.00001z"
+                                opacity="undefined" stroke="#000" fill="none" />
+                            <path id="svg_3"
+                                d="m600.00002,430.50001c-219.61326,0 -397.5,-58.40055 -397.5,-130.49999c0,-72.09944 177.88674,-130.49999 397.5,-130.49999c219.61326,0 397.5,58.40055 397.5,130.49999c0,72.09944 -177.88674,130.49999 -397.5,130.49999z"
+                                opacity="undefined" stroke="#000" fill="none" />
+                            <path id="svg_4"
+                                d="m599.99998,395c-191.71271,0 -347,-42.51382 -347,-95.00001c0,-52.48619 155.28729,-95.00001 347,-95.00001c191.71271,0 347,42.51382 347,95.00001c0,52.48619 -155.28729,95.00001 -347,95.00001z"
+                                opacity="undefined" stroke="#000" fill="none" />
+                            <path id="svg_5"
+                                d="m600.00002,365.5c-163.53591,0 -296,-29.31215 -296,-65.5c0,-36.18784 132.46409,-65.5 296,-65.5c163.53591,0 296,29.31215 296,65.5c0,36.18784 -132.46409,65.5 -296,65.5z"
+                                opacity="undefined" stroke="#000" fill="none" />
+                            <path id="svg_6"
+                                d="m600.00003,330.49998c-132.5967,0 -240.00002,-13.64917 -240.00002,-30.5c0,-16.85083 107.40332,-30.5 240.00002,-30.5c132.5967,0 240.00002,13.64917 240.00002,30.5c0,16.85083 -107.40332,30.5 -240.00002,30.5z"
+                                opacity="undefined" stroke="#000" fill="none" />
                         </svg>
 
                         <!-- object to move -->
                         <ul class="list">
-                            <li class="box box-1 motion-pause motion-move-1">1</li>
-                            <li class="box box-2 motion-pause motion-move-2">2</li>
-                            <li class="box box-3 motion-pause motion-move-3">3</li>
-                            <li class="box box-4 motion-pause motion-move-4">4</li>
-                            <li class="box box-5 motion-pause motion-move-5">5</li>
-                            <li class="box box-6 motion-pause motion-move-6">6</li>
+                            <li class="box box-1 target-1">1</li>
+                            <li class="box box-2 target-2">2</li>
+                            <li class="box box-3 target-3">3</li>
+                            <li class="box box-4 target-4">4</li>
+                            <li class="box box-5 target-5">5</li>
+                            <li class="box box-6 target-6">6</li>
                         </ul>
                     
                     </div>
@@ -108,47 +123,137 @@
         let disabled = false;
         let limit = 1;
 
-        let animationGreen = anime({
-            targets: '.motion-move-1',
-            translateX: anime.path('.svg-path path')('x'),
-            translateY: anime.path('.svg-path path')('y'),
-            duration: 5000,
-            easing: 'easeInOutSine',
-            autoplay: false,
+        let path1 = anime.path('.svg-path #svg_1');
+        let path2 = anime.path('.svg-path #svg_2');
+        let path3 = anime.path('.svg-path #svg_3');
+        let path4 = anime.path('.svg-path #svg_4');
+        let path5 = anime.path('.svg-path #svg_5');
+        let path6 = anime.path('.svg-path #svg_6');
 
-            update: function (a) {
-                visibilitychangeLogEl.innerHTML = 'animation progress ' + Math.round(a.progress) + '%';
-                if (Math.round(a.progress) === 25 && disabled === true && limit === 1) {
-                    animationGreen.pause();
-                    disabled = false;
-                    limit += 1;
-                }
-                if (Math.round(a.progress) === 50 && disabled === true && limit === 2) {
-                    animationGreen.pause();
-                    disabled = false;
-                    limit += 1;
-                }
-                if (Math.round(a.progress) === 75 && disabled === true && limit === 3) {
-                    animationGreen.pause();
-                    disabled = false;
-                    limit = 1;
-                }
-            },
-            complete: function () {
-                disabled = false;
-            }
+        let motionMave1 = anime({
+            targets: ".target-1",
+            translateX: path1('x'),
+            translateY: path1('y'),
+            autoplay: false,
         });
 
-        btnMove.addEventListener('click', e => {
+        let motionMave2 = anime({
+            targets: ".target-2",
+            translateX: path2('x'),
+            translateY: path2('y'),
+            autoplay: false,
+        });
+
+        let motionMave3 = anime({
+            targets: ".target-3",
+            translateX: path3('x'),
+            translateY: path3('y'),
+            autoplay: false,
+        });
+
+        let motionMave4 = anime({
+            targets: ".target-4",
+            translateX: path4('x'),
+            translateY: path4('y'),
+            autoplay: false,
+        });
+
+        let motionMave5 = anime({
+            targets: ".target-5",
+            translateX: path5('x'),
+            translateY: path5('y'),
+            autoplay: false,
+        });
+
+        let motionMave6 = anime({
+            targets: ".target-6",
+            translateX: path6('x'),
+            translateY: path6('y'),
+            autoplay: false,
+        });
+
+        const changePath = (motionMove, target, path) => {
+            motionMove = anime({
+                targets: target,
+                translateX: path('x'),
+                translateY: path('y'),
+                duration: 3000,
+                direction: 'reverse',
+                easing: 'easeInOutSine',
+                autoplay: false,
+                update: function (a) {
+                    // visibilitychangeLogEl.innerHTML = 'animation progress ' + Math.round(a.progress) + '%';
+                },
+                complete: function (a) {
+                    disabled = false;
+                }
+            });
+            motionMove.play();
+        }
+
+        btnMove.addEventListener('click', async e => {
             e.preventDefault();
-            console.log(disabled);
 
             if (disabled) return;
 
             if (e.target.tagName !== 'BUTTON') return;
 
             disabled = true;
-            animationGreen.play();
+
+            if (limit === 1) {
+                changePath(motionMave1, ".target-1", path1);
+                changePath(motionMave2, ".target-2", path2);
+                changePath(motionMave3, ".target-3", path3);
+                changePath(motionMave4, ".target-4", path4);
+                changePath(motionMave5, ".target-5", path5);
+                changePath(motionMave6, ".target-6", path6);
+            }
+            if (limit === 2) {
+                changePath(motionMave1, ".target-6", path1);
+                changePath(motionMave2, ".target-1", path2);
+                changePath(motionMave3, ".target-2", path3);
+                changePath(motionMave4, ".target-3", path4);
+                changePath(motionMave5, ".target-4", path5);
+                changePath(motionMave6, ".target-5", path6);
+            }
+            if (limit === 3) {
+                changePath(motionMave1, ".target-5", path1);
+                changePath(motionMave2, ".target-6", path2);
+                changePath(motionMave3, ".target-1", path3);
+                changePath(motionMave4, ".target-2", path4);
+                changePath(motionMave5, ".target-3", path5);
+                changePath(motionMave6, ".target-4", path6);
+            }
+            if (limit === 4) {
+                changePath(motionMave1, ".target-4", path1);
+                changePath(motionMave2, ".target-5", path2);
+                changePath(motionMave3, ".target-6", path3);
+                changePath(motionMave4, ".target-1", path4);
+                changePath(motionMave5, ".target-2", path5);
+                changePath(motionMave6, ".target-3", path6);
+            }
+            if (limit === 5) {
+                changePath(motionMave1, ".target-3", path1);
+                changePath(motionMave2, ".target-4", path2);
+                changePath(motionMave3, ".target-5", path3);
+                changePath(motionMave4, ".target-6", path4);
+                changePath(motionMave5, ".target-1", path5);
+                changePath(motionMave6, ".target-2", path6);
+            }
+            if (limit === 6) {
+                changePath(motionMave1, ".target-2", path1);
+                changePath(motionMave2, ".target-3", path2);
+                changePath(motionMave3, ".target-4", path3);
+                changePath(motionMave4, ".target-5", path4);
+                changePath(motionMave5, ".target-6", path5);
+                changePath(motionMave6, ".target-1", path6);
+            }
+
+            if (limit === 6) {
+                limit = 1;
+            } else {
+                limit += 1;
+            }
         });
     </script>
 
