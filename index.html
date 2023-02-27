@@ -32,25 +32,10 @@
                     <div class="motion-container">
                     
                         <!-- drawing svg path -->
-                        <svg class="svg-path" xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
-                            <path id="svg_1"
+                        <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
+                            <path id="svg_path"
                                 d="m599.99997,504.50003c-271.82319,0 -491.99998,-91.51658 -491.99998,-204.50001c0,-112.98343 220.17679,-204.50001 491.99998,-204.50001c271.82319,0 491.99998,91.51658 491.99998,204.50001c0,112.98343 -220.17679,204.50001 -491.99998,204.50001z"
-                                opacity="undefined" stroke="#000" fill="none" />
-                            <path id="svg_2"
-                                d="m600.00001,467.99999c-249.99998,0 -452.49996,-75.18232 -452.49996,-168.00001c0,-92.81768 202.49998,-168.00001 452.49996,-168.00001c249.99998,0 452.49996,75.18232 452.49996,168.00001c0,92.81768 -202.49998,168.00001 -452.49996,168.00001z"
-                                opacity="undefined" stroke="#000" fill="none" />
-                            <path id="svg_3"
-                                d="m600.00002,430.50001c-219.61326,0 -397.5,-58.40055 -397.5,-130.49999c0,-72.09944 177.88674,-130.49999 397.5,-130.49999c219.61326,0 397.5,58.40055 397.5,130.49999c0,72.09944 -177.88674,130.49999 -397.5,130.49999z"
-                                opacity="undefined" stroke="#000" fill="none" />
-                            <path id="svg_4"
-                                d="m599.99998,395c-191.71271,0 -347,-42.51382 -347,-95.00001c0,-52.48619 155.28729,-95.00001 347,-95.00001c191.71271,0 347,42.51382 347,95.00001c0,52.48619 -155.28729,95.00001 -347,95.00001z"
-                                opacity="undefined" stroke="#000" fill="none" />
-                            <path id="svg_5"
-                                d="m600.00002,365.5c-163.53591,0 -296,-29.31215 -296,-65.5c0,-36.18784 132.46409,-65.5 296,-65.5c163.53591,0 296,29.31215 296,65.5c0,36.18784 -132.46409,65.5 -296,65.5z"
-                                opacity="undefined" stroke="#000" fill="none" />
-                            <path id="svg_6"
-                                d="m600.00003,330.49998c-132.5967,0 -240.00002,-13.64917 -240.00002,-30.5c0,-16.85083 107.40332,-30.5 240.00002,-30.5c132.5967,0 240.00002,13.64917 240.00002,30.5c0,16.85083 -107.40332,30.5 -240.00002,30.5z"
-                                opacity="undefined" stroke="#000" fill="none" />
+                                stroke="none" fill="none" />
                         </svg>
 
                         <!-- object to move -->
@@ -113,22 +98,66 @@
         </div>
     </footer>
 
-    <!-- <script src="js/task-14.js" type="module"></script> -->
+    <script src="js/snap.svg-min.js"></script>
     <script src="js/anime.min.js"></script>
 
     <script>
         const btnMove = document.querySelector('.btnMove');
         const visibilitychangeLogEl = document.querySelector('.visibilitychange-log');
+        // const svgPath = document.querySelector('.svg-path');
 
         let disabled = false;
         let limit = 1;
 
-        let path1 = anime.path('.svg-path #svg_1');
-        let path2 = anime.path('.svg-path #svg_2');
-        let path3 = anime.path('.svg-path #svg_3');
-        let path4 = anime.path('.svg-path #svg_4');
-        let path5 = anime.path('.svg-path #svg_5');
-        let path6 = anime.path('.svg-path #svg_6');
+        // Создание объекта Snap из SVG-элемента
+        var s = Snap(".svg");
+
+        // Получение элемента path
+        var path = s.select("#svg_path");
+
+        // Получение общей длины path
+        var pathLength = Snap.path.getTotalLength(path);
+
+        // Разбиение path на 6 сегментов
+        var segmentLengths = [
+            pathLength * 0.25,
+            pathLength * 0.125,
+            pathLength * 0.125,
+            pathLength * 0.25,
+            pathLength * 0.125,
+            pathLength * 0.125
+        ];
+
+        // Получение начала и конца каждого сегмента
+        var segmentStartsAndEnds = [
+            [0, segmentLengths[0]],
+            [segmentLengths[0], segmentLengths[0] + segmentLengths[1]],
+            [segmentLengths[0] + segmentLengths[1], segmentLengths[0] + segmentLengths[1] + segmentLengths[2]],
+            [segmentLengths[0] + segmentLengths[1] + segmentLengths[2], segmentLengths[0] + segmentLengths[1] + segmentLengths[2] + segmentLengths[3]],
+            [segmentLengths[0] + segmentLengths[1] + segmentLengths[2] + segmentLengths[3], segmentLengths[0] + segmentLengths[1] + segmentLengths[2] + segmentLengths[3] + segmentLengths[4]],
+            [segmentLengths[0] + segmentLengths[1] + segmentLengths[2] + segmentLengths[3] + segmentLengths[4], pathLength]
+        ];
+
+        // Создание новых path для каждого сегмента
+        for (var i = 0; i < segmentStartsAndEnds.length; i++) {
+            var segment = Snap.path.getSubpath(path, segmentStartsAndEnds[i][0], segmentStartsAndEnds[i][1]);
+            var segmentPath = s.path(segment);
+            // Установка атрибутов каждого сегмента
+            segmentPath.attr({
+                id: `svg_${i + 1}`,
+                fill: "none",
+                stroke: "#000",
+                strokeWidth: 1
+            });
+        }
+
+        //anime.js
+        let path1 = anime.path('.svg #svg_1');
+        let path2 = anime.path('.svg #svg_2');
+        let path3 = anime.path('.svg #svg_3');
+        let path4 = anime.path('.svg #svg_4');
+        let path5 = anime.path('.svg #svg_5');
+        let path6 = anime.path('.svg #svg_6');
 
         let motionMave1 = anime({
             targets: ".target-1",
@@ -177,7 +206,7 @@
                 targets: target,
                 translateX: path('x'),
                 translateY: path('y'),
-                duration: 3000,
+                duration: 1000,
                 direction: 'reverse',
                 easing: 'easeInOutSine',
                 autoplay: false,
@@ -201,38 +230,14 @@
             disabled = true;
 
             if (limit === 1) {
-                changePath(motionMave1, ".target-1", path1);
-                changePath(motionMave2, ".target-2", path2);
-                changePath(motionMave3, ".target-3", path3);
-                changePath(motionMave4, ".target-4", path4);
-                changePath(motionMave5, ".target-5", path5);
-                changePath(motionMave6, ".target-6", path6);
+                changePath(motionMave1, ".target-2", path1);
+                changePath(motionMave2, ".target-3", path2);
+                changePath(motionMave3, ".target-4", path3);
+                changePath(motionMave4, ".target-5", path4);
+                changePath(motionMave5, ".target-6", path5);
+                changePath(motionMave6, ".target-1", path6);
             }
             if (limit === 2) {
-                changePath(motionMave1, ".target-6", path1);
-                changePath(motionMave2, ".target-1", path2);
-                changePath(motionMave3, ".target-2", path3);
-                changePath(motionMave4, ".target-3", path4);
-                changePath(motionMave5, ".target-4", path5);
-                changePath(motionMave6, ".target-5", path6);
-            }
-            if (limit === 3) {
-                changePath(motionMave1, ".target-5", path1);
-                changePath(motionMave2, ".target-6", path2);
-                changePath(motionMave3, ".target-1", path3);
-                changePath(motionMave4, ".target-2", path4);
-                changePath(motionMave5, ".target-3", path5);
-                changePath(motionMave6, ".target-4", path6);
-            }
-            if (limit === 4) {
-                changePath(motionMave1, ".target-4", path1);
-                changePath(motionMave2, ".target-5", path2);
-                changePath(motionMave3, ".target-6", path3);
-                changePath(motionMave4, ".target-1", path4);
-                changePath(motionMave5, ".target-2", path5);
-                changePath(motionMave6, ".target-3", path6);
-            }
-            if (limit === 5) {
                 changePath(motionMave1, ".target-3", path1);
                 changePath(motionMave2, ".target-4", path2);
                 changePath(motionMave3, ".target-5", path3);
@@ -240,13 +245,37 @@
                 changePath(motionMave5, ".target-1", path5);
                 changePath(motionMave6, ".target-2", path6);
             }
+            if (limit === 3) {
+                changePath(motionMave1, ".target-4", path1);
+                changePath(motionMave2, ".target-5", path2);
+                changePath(motionMave3, ".target-6", path3);
+                changePath(motionMave4, ".target-1", path4);
+                changePath(motionMave5, ".target-2", path5);
+                changePath(motionMave6, ".target-3", path6);
+            }
+            if (limit === 4) {
+                changePath(motionMave1, ".target-5", path1);
+                changePath(motionMave2, ".target-6", path2);
+                changePath(motionMave3, ".target-1", path3);
+                changePath(motionMave4, ".target-2", path4);
+                changePath(motionMave5, ".target-3", path5);
+                changePath(motionMave6, ".target-4", path6);
+            }
+            if (limit === 5) {
+                changePath(motionMave1, ".target-6", path1);
+                changePath(motionMave2, ".target-1", path2);
+                changePath(motionMave3, ".target-2", path3);
+                changePath(motionMave4, ".target-3", path4);
+                changePath(motionMave5, ".target-4", path5);
+                changePath(motionMave6, ".target-5", path6);
+            }
             if (limit === 6) {
-                changePath(motionMave1, ".target-2", path1);
-                changePath(motionMave2, ".target-3", path2);
-                changePath(motionMave3, ".target-4", path3);
-                changePath(motionMave4, ".target-5", path4);
-                changePath(motionMave5, ".target-6", path5);
-                changePath(motionMave6, ".target-1", path6);
+                changePath(motionMave1, ".target-1", path1);
+                changePath(motionMave2, ".target-2", path2);
+                changePath(motionMave3, ".target-3", path3);
+                changePath(motionMave4, ".target-4", path4);
+                changePath(motionMave5, ".target-5", path5);
+                changePath(motionMave6, ".target-6", path6);
             }
 
             if (limit === 6) {
