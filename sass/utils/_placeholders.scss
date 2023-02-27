@@ -1,7 +1,7 @@
 /* placeholders */
 %body {
   color: $primary-text-color;
-  background-color: $bg-color-white;
+  background-color: $bg-color-page;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
@@ -45,21 +45,19 @@ p {
 %conteiner {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 /* responsive-container */
 %responsive-container {
-  // @media screen and (min-width: 480px) {
-  //   width: 480px;
-  // }
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
 
-  // @media screen and (min-width: 768px) {
-  //   width: 768px;
-  // }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
 
-  @media screen and (min-width: 1200px) {
-    width: 1230px;
+  @media screen and (min-width: 1530px) {
+    width: 1530px;
   }
 }
 .conteiner {

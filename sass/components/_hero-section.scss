@@ -1,7 +1,16 @@
+.page-hero__conteiner{
+  display: flex;
+  flex-direction: column;
+}
+
 .motion-container {
   position: relative;
-  padding: 0;
   margin: auto;
+  padding: 0;
+}
+
+.svg{
+  display: block;
 }
 
 .box {

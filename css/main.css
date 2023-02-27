@@ -264,7 +264,7 @@ summary {
 /* placeholders */
 body {
   color: #757575;
-  background-color: #ffffff;
+  background-color: #B5FEC7;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
@@ -296,14 +296,24 @@ p {
 .conteiner {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 /* responsive-container */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 480px) {
   .conteiner {
-    width: 1230px;
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .conteiner {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1530px) {
+  .conteiner {
+    width: 1530px;
   }
 }
 
@@ -325,6 +335,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   padding-top: 64px;
+  padding-bottom: 64px;
   font-family: Raleway, cursive;
   font-style: normal;
   font-weight: 500;
@@ -334,10 +345,24 @@ p {
   color: #000000;
 }
 
+.page-hero__conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .motion-container {
   position: relative;
-  padding: 0;
   margin: auto;
+  padding: 0;
+}
+
+.svg {
+  display: block;
 }
 
 .box {
@@ -423,7 +448,6 @@ p {
 }
 
 .page-footer {
-  background-color: #2f303a;
   color: #ffffff;
   padding-top: 60px;
   padding-bottom: 60px;
