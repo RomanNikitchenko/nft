@@ -45,3 +45,13 @@
 .box.target-6 {
   background: rgb(255, 101, 101);
 }
+
+#image-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 120px;
+  height: 120px;
+}

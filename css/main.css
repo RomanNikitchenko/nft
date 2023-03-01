@@ -319,6 +319,9 @@ p {
 }
 
 .main-nav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,8 +331,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding: 2px;
   font-family: Raleway, cursive;
   font-style: normal;
   font-weight: 500;
@@ -390,6 +392,19 @@ p {
 
 .box.target-6 {
   background: #ff6565;
+}
+
+#image-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 120px;
+  height: 120px;
 }
 
 .social-links {

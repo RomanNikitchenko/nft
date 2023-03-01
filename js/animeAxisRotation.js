@@ -98,23 +98,14 @@
         if (e.target.classList.contains("logo__accent")) return;
         if (e.target.tagName === 'A') return;
         if (e.currentTarget.tagName !== 'BODY') return;
-        
-        e.preventDefault();
 
         if (disabled) return;
-
-        console.log(e.currentTarget.tagName);
-        console.log(e.target.tagName);
 
         disabled = true;
 
         byCondition(changePath);
 
-        if (limit === 6) {
-            limit = 1;
-        } else {
-            limit += 1;
-        }
+        limit = (limit === 6) ? 1 : limit + 1;
     };
 
     document.body.addEventListener('click', toggleElementsAnimation);
@@ -123,17 +114,14 @@
         if (e.target.classList.contains("logo")) return;
         if (e.target.classList.contains("logo__accent")) return;
         if (e.target.tagName === 'A') return;
+
         if (disabled) return;
 
         disabled = true;
 
         byCondition(changePath);
 
-        if (limit === 6) {
-            limit = 1;
-        } else {
-            limit += 1;
-        }
+        limit = (limit === 6) ? 1 : limit + 1;
     });
 
     const screenWidthReset = () => {
@@ -146,7 +134,6 @@
 
         byCondition(screenWidthchangePath);
     }
-
 
     // Добавление обработчика события resize для перезаписи path от 1 до 6 при изменении размера экрана
     window.addEventListener('resize', screenWidthReset);
