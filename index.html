@@ -32,7 +32,7 @@
                     <div class="motion-container">
 
                         <!-- drawing svg path -->
-                        <svg class="svg" width="1198" height="627" viewBox="0 0 1198 627" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="svg-container" width="1198" height="627" viewBox="0 0 1198 627" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path id="svg_path"
                                 d="M1195.56 245.882C1205.12 330.051 1147.16 413.944 1045.43 481.524C943.73 549.088 798.407 600.252 633.567 618.972C468.728 637.692 315.632 620.418 201.37 577.38C87.0809 534.331 11.7864 465.571 2.22789 381.403C-7.33066 297.234 50.6277 213.341 152.354 145.761C254.055 78.1973 399.378 27.0334 564.218 8.31341C729.057 -10.4066 882.153 6.86738 996.415 49.9053C1110.7 92.9537 1186 161.714 1195.56 245.882Z" />
                         </svg>
@@ -43,12 +43,7 @@
                         <div class="box box-4 target-4">4</div>
                         <div class="box box-5 target-5">5</div>
                         <div class="box box-6 target-6">6</div>
-                    
                     </div>
-
-                    <button type="button" class="btnMove">
-                        move
-                    </button>
                 </div>
         </section>
     </main>
@@ -61,7 +56,7 @@
                 <ul class="social-links list">
                 
                     <li class="social-links__item social-links__item--top">
-                        <a class="social-links__link social-links__link--color" href="">
+                        <a class="social-links__link social-links__link--color" href="./index.html">
                             Twitter
                             <!-- <svg class="social-links__icon" width="20" height="20">
                                 <use href="./images/icons.svg#instagram"></use>
@@ -70,7 +65,7 @@
                     </li>
                     
                     <li class="social-links__item social-links__item--top">
-                        <a class="social-links__link social-links__link--color" href="">
+                        <a class="social-links__link social-links__link--color" href="./index.html">
                             Discord
                             <!-- <svg class="social-links__icon" width="20" height="20">
                                 <use href="./images/icons.svg#twitter"></use>
@@ -79,7 +74,7 @@
                     </li>
                 
                     <li class="social-links__item social-links__item--top">
-                        <a class="social-links__link social-links__link--color" href="">
+                        <a class="social-links__link social-links__link--color" href="./index.html">
                             OpenSea
                             <!-- <svg class="social-links__icon" width="20" height="20">
                                 <use href="./images/icons.svg#facebook"></use>
@@ -93,18 +88,13 @@
     </footer>
 
     <script>
-        // получаем ширину экрана
         var screenWidth = window.innerWidth;
-
-        // если ширина экрана меньше 768 пикселей, скрываем один элемент и отображаем другой
-        if (screenWidth < 768) {
-            console.log("screenWidth < 768")
-        } 
-        if (screenWidth < 1530) {
-            console.log("screenWidth < 1530")
-        } 
-        if (screenWidth > 1530) {
-            console.log("screenWidth > 1530")
+        if (screenWidth <= 768) { 
+           console.log("screenWidth <= 768", screenWidth)
+        } else if (screenWidth <= 1530) {
+           console.log("screenWidth <= 1530", screenWidth)
+        } else { 
+           console.log("screenWidth > 1530", screenWidth)
         }
     </script>
 
