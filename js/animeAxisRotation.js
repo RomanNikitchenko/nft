@@ -97,7 +97,6 @@
         if (e.target.classList.contains("logo")) return;
         if (e.target.classList.contains("logo__accent")) return;
         if (e.target.tagName === 'A') return;
-        if (e.currentTarget.tagName !== 'BODY') return;
 
         if (disabled) return;
 
@@ -109,20 +108,7 @@
     };
 
     document.body.addEventListener('click', toggleElementsAnimation);
-    
-    window.addEventListener('touchstart', function (e) {
-        if (e.target.classList.contains("logo")) return;
-        if (e.target.classList.contains("logo__accent")) return;
-        if (e.target.tagName === 'A') return;
-
-        if (disabled) return;
-
-        disabled = true;
-
-        byCondition(changePath);
-
-        limit = (limit === 6) ? 1 : limit + 1;
-    });
+    window.addEventListener('touchstart', toggleElementsAnimation);
 
     const screenWidthReset = () => {
         path1 = anime.path('#svg_1');

@@ -13,6 +13,33 @@
   display: block;
 }
 
+.gallery {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 120px;
+  height: 120px;
+}
+
+.gallery__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.gallery__image.hidden {
+  opacity: 0;
+}
+
+.gallery__button {
+  margin-top: 20px;
+}
+
 .box {
   position: absolute;
   left: -20px;
