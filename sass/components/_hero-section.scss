@@ -47,30 +47,31 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  border: 1px solid;
 }
 
 .box.target-1 {
-  background: rgb(255, 102, 178);
+  background: #ff66b2;
 }
 
 .box.target-2 {
-  background: rgb(255, 203, 105);
+  background: #ffcb69;
 }
 
 .box.target-3 {
-  background: rgb(160, 255, 105);
+  background: #a0ff69;
 }
 
 .box.target-4 {
-  background: rgb(105, 255, 248);
+  background: #69fff8;
 }
 
 .box.target-5 {
-  background: rgb(105, 120, 255);
+  background: #6978ff;
 }
 
 .box.target-6 {
-  background: rgb(255, 101, 101);
+  background: #ff6565;
 }
 
 #image-container {

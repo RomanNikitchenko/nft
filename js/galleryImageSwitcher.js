@@ -1,3 +1,5 @@
+import { changeBackgroundColor } from './changeBackgroundColor.js';
+
 const images = document.querySelectorAll('.gallery__image');
 let currentIndex = 0;
 let isAnimating = false;
@@ -16,7 +18,10 @@ function switchImages() {
 
     // Показать следующее изображение
     currentIndex = (currentIndex + 1) % images.length;
-    images[currentIndex].classList.remove('hidden');
+      images[currentIndex].classList.remove('hidden');
+      
+    // вызываем функцию для смемы цвета фона  
+    changeBackgroundColor();
 
     // Добавить анимацию для скрытия и показа изображений
     setTimeout(() => {

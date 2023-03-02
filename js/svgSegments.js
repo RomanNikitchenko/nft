@@ -37,12 +37,12 @@
 
         // Разбиение path на 6 сегментов
         var segmentLengths = [
-            pathLength * 0.115,
-            pathLength * 0.270,
-            pathLength * 0.115,
-            pathLength * 0.115,
-            pathLength * 0.270,
-            pathLength * 0.115,
+            pathLength * 0.120,
+            pathLength * 0.260,
+            pathLength * 0.120,
+            pathLength * 0.120,
+            pathLength * 0.260,
+            pathLength * 0.120,
         ];
 
         // Получение начала и конца каждого сегмента
