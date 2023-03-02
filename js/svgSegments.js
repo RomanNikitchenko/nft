@@ -37,11 +37,11 @@
 
         // Разбиение path на 6 сегментов
         var segmentLengths = [
-            pathLength * 0.25,
-            pathLength * 0.125,
             pathLength * 0.125,
             pathLength * 0.25,
             pathLength * 0.125,
+            pathLength * 0.125,
+            pathLength * 0.25,
             pathLength * 0.125,
         ];
 
