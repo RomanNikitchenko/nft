@@ -94,7 +94,7 @@
     }
 
     const toggleElementsAnimation = (e) => {
-        if (!e.target.classList.contains("gallery__image")) return;
+        if (!e.target.classList.contains("image")) return;
 
         if (disabled) return;
 

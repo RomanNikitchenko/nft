@@ -16,6 +16,7 @@ function switchImages(imageId = null) {
     // Скрыть текущее изображение
     images[currentIndex].classList.add('hidden');
 
+    //выбраная картинка становится в центр
     if (imageId) {
       currentIndex = (imageId - 1);
       images[currentIndex].classList.remove('hidden');
@@ -23,6 +24,9 @@ function switchImages(imageId = null) {
       currentIndex = (currentIndex + 1) % images.length;
       images[currentIndex].classList.remove('hidden');
     }
+
+    // currentIndex = (currentIndex + 1) % images.length;
+    // images[currentIndex].classList.remove('hidden');
     
     // Добавить анимацию для скрытия и показа изображений
     setTimeout(() => {
