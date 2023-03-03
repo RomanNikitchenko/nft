@@ -94,9 +94,7 @@
     }
 
     const toggleElementsAnimation = (e) => {
-        if (e.target.classList.contains("logo")) return;
-        if (e.target.classList.contains("logo__accent")) return;
-        if (e.target.tagName === 'A') return;
+        if (!e.target.classList.contains("gallery__image")) return;
 
         if (disabled) return;
 
