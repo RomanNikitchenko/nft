@@ -330,6 +330,9 @@ p {
 }
 
 .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-family: Raleway, cursive;
   font-style: normal;
   font-weight: 500;
@@ -370,9 +373,12 @@ p {
   width: 86px;
   height: 86px;
   border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .gallery {
+  overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -380,6 +386,7 @@ p {
           transform: translate(-50%, -50%);
   width: 320px;
   height: 320px;
+  cursor: pointer;
 }
 
 .gallery__image {
@@ -401,6 +408,10 @@ p {
   border: 1px solid red;
 }
 
+.page-footer {
+  padding-bottom: 21px;
+}
+
 .social-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -408,75 +419,23 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: -10px;
+  margin-left: -32px;
 }
 
 .social-links__item {
-  margin-left: 10px;
-  margin-top: 16px;
-}
-
-.social-links__item--top {
-  margin-top: 20px;
+  margin-left: 32px;
 }
 
 .social-links__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  fill: #afb1b8;
-  -webkit-transition-property: background-color, fill;
-  transition-property: background-color, fill;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-links__link--color {
-  background-color: rgba(255, 255, 255, 0.1);
-  fill: #ffffff;
+  width: 86px;
+  height: 86px;
+  fill: #212121;
 }
 
 .social-links__icon {
   margin: auto;
-}
-
-.social-links__link:hover, .social-links__link:focus {
-  background-color: #2196f3;
-  fill: #ffffff;
-}
-
-.page-footer {
-  color: #ffffff;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  /*logo footer*/
-}
-
-.page-footer__logo {
-  color: #ffffff;
-  margin-bottom: 20px;
-  margin-right: 0;
-  display: block;
-}
-
-@media screen and (max-width: 767px) {
-  .our-social-networks {
-    margin-bottom: 60px;
-  }
-}
-
-.our-social-networks__titel {
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
-.social-links__item--top {
-  margin-top: 20px;
 }
 /*# sourceMappingURL=main.css.map */
