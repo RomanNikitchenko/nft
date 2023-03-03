@@ -397,6 +397,10 @@ p {
   opacity: 0;
 }
 
+.border {
+  border: 1px solid red;
+}
+
 .social-links {
   display: -webkit-box;
   display: -ms-flexbox;

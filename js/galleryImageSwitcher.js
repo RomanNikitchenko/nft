@@ -1,6 +1,8 @@
-// import { changeBackgroundColor } from './changeBackgroundColor.js';
+import { changeBackgroundColor } from './changeBackgroundColor.js';
+// import { selectImageBox } from './selectImageBox.js';
 
 const images = document.querySelectorAll('.gallery__image');
+
 let currentIndex = 0;
 let isAnimating = false;
 
@@ -9,7 +11,7 @@ for (let i = 1; i < images.length; i++) {
   images[i].classList.add('hidden');
 }
 
-function switchImages(imageId = null) {
+const switchImages = (imageMini = null) => {
   if (!isAnimating) {
     isAnimating = true;
 
@@ -17,16 +19,20 @@ function switchImages(imageId = null) {
     images[currentIndex].classList.add('hidden');
 
     //выбраная картинка становится в центр
-    if (imageId) {
-      currentIndex = (imageId - 1);
+    if (imageMini) {
+      currentIndex = (imageMini - 1);
       images[currentIndex].classList.remove('hidden');
     } else { // Показать следующее изображение
       currentIndex = (currentIndex + 1) % images.length;
       images[currentIndex].classList.remove('hidden');
     }
 
-    // currentIndex = (currentIndex + 1) % images.length;
-    // images[currentIndex].classList.remove('hidden');
+    //меняем цвет фона
+    changeBackgroundColor()
+
+    //выбранные элементы получают класс border
+    // selectImageBox(currentIndex);
+
     
     // Добавить анимацию для скрытия и показа изображений
     setTimeout(() => {
@@ -38,8 +44,8 @@ function switchImages(imageId = null) {
 // Добавить обработчик кликов на кнопку
 const handleImageClick = (e) => {
   if (e.target.classList.contains("mini-image")) {
-    const imageId = e.target.dataset.id;
-    switchImages(imageId);
+    const imageMini = e.target.dataset.mini;
+    switchImages(imageMini);
   }
 
   if (!e.target.classList.contains("gallery__image")) return;
