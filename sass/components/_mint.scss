@@ -1,14 +1,20 @@
 .mint {
-    // font-family: 'Chenile Deluxe DEMO';
-    // font-family: Raleway, cursive;
-    // font-style: normal;
-    // font-weight: 500;
-    // font-size: 32px;
-    // line-height: 1;
-    // color: #FFFFFF;
-    padding: 24.5px 54px;
+    display: block;
+    padding: 20px 59.5px;
     text-decoration: none;
     background-color: #000000;
+}
+
+.mint {
+    @media screen and (min-width: 768px) {
+        padding: 20px 54px;
+    }
+}
+
+.mint .mint__icon{
+    display: block;
+    width: 61px;
+    height: 32px;
 }
 
 .main-nav .mint {

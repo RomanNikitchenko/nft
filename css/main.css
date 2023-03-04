@@ -362,49 +362,48 @@ p {
 }
 
 .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   text-decoration: none;
   color: #000000;
 }
 
-.logo .drained-planet-m {
+.logo .logo__icon {
   display: block;
+  width: 299px;
+  height: 48px;
 }
 
 @media screen and (min-width: 768px) {
-  .logo .drained-planet-m {
-    display: none;
+  .logo .logo__icon {
+    width: 398px;
+    height: 64px;
   }
 }
 
 @media screen and (min-width: 1530px) {
-  .logo .drained-planet-m {
-    display: none;
-  }
-}
-
-.logo .drained-planet-d {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .logo .drained-planet-d {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1530px) {
-  .logo .drained-planet-d {
-    display: block;
+  .logo .logo__icon {
+    width: 398px;
+    height: 64px;
   }
 }
 
 .mint {
-  padding: 24.5px 54px;
+  display: block;
+  padding: 20px 59.5px;
   text-decoration: none;
   background-color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .mint {
+    padding: 20px 54px;
+  }
+}
+
+.mint .mint__icon {
+  display: block;
+  width: 61px;
+  height: 32px;
 }
 
 .main-nav .mint {
