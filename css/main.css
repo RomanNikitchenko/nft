@@ -400,19 +400,40 @@ p {
   background-color: #000000;
 }
 
-.mint.main-nav__mint {
+.main-nav .mint {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .mint.main-nav__mint {
+  .main-nav .mint {
     display: block;
   }
 }
 
 @media screen and (min-width: 1530px) {
-  .mint.main-nav__mint {
+  .main-nav .mint {
     display: block;
+  }
+}
+
+.motion-container .mint {
+  display: block;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+@media screen and (min-width: 768px) {
+  .motion-container .mint {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1530px) {
+  .motion-container .mint {
+    display: none;
   }
 }
 

@@ -11,18 +11,38 @@
     background-color: #000000;
 }
 
-.mint.main-nav__mint{
+.main-nav .mint {
     display: none;
 }
 
-.mint.main-nav__mint {
+.main-nav .mint {
     @media screen and (min-width: 768px) {
         display: block;
     }
 }
 
-.mint.main-nav__mint {
+.main-nav .mint {
     @media screen and (min-width: 1530px) {
         display: block;
+    }
+}
+
+.motion-container .mint {
+    display: block;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.motion-container .mint {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.motion-container .mint {
+    @media screen and (min-width: 1530px) {
+        display: none;
     }
 }
