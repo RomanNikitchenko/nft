@@ -2,3 +2,17 @@
   display: flex;
   justify-content: center;
 }
+
+.main-nav {
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.main-nav {
+  @media screen and (min-width: 1530px) {
+    justify-content: space-between;
+    align-items: center;
+  }
+}

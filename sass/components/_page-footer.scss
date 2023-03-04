@@ -1,3 +1,32 @@
 .page-footer {
   padding-bottom: 21px;
 }
+
+.page-footer {
+  @media screen and (min-width: 768px) {
+    padding-bottom: 64px;
+  }
+}
+
+.page-footer {
+  @media screen and (min-width: 1530px) {
+    padding-bottom: 64px;
+  }
+}
+
+.page-footer__conteiner {
+  display: flex;
+  justify-content: center;
+}
+
+.page-footer__conteiner {
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
+}
+
+.page-footer__conteiner {
+  @media screen and (min-width: 1530px) {
+      justify-content: flex-start;
+  }
+}

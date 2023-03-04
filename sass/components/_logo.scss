@@ -6,9 +6,22 @@
   font-weight: 500;
   font-size: 48px;
   line-height: 1;
-  /* identical to box height */
   text-decoration: none;
   color: #000000;
+}
+
+.logo {
+  @media screen and (min-width: 768px) {
+    font-size: 64px;
+    line-height: 1;
+  }
+}
+
+.logo {
+  @media screen and (min-width: 1530px) {
+    font-size: 64px;
+    line-height: 1;
+  }
 }
 
 

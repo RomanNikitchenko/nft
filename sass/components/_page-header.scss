@@ -1,5 +1,15 @@
 .page-header {
   padding-top: 54px;
-  padding-left: 64;
-  padding-right: 64;
+}
+
+.page-header {
+  @media screen and (min-width: 768px) {
+    padding-top: 44px;
+  }
+}
+
+.page-header {
+  @media screen and (min-width: 1530px) {
+    padding-top: 44px;
+  }
 }
