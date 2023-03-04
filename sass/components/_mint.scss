@@ -11,6 +11,12 @@
     }
 }
 
+.mint {
+    @media screen and (min-width: 1530px) {
+        padding: 20px 54px;
+    }
+}
+
 .mint .mint__icon{
     display: block;
     width: 61px;
