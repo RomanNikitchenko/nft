@@ -365,37 +365,44 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: Raleway, cursive;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 1;
   text-decoration: none;
   color: #000000;
 }
 
+.logo .drained-planet-m {
+  display: block;
+}
+
 @media screen and (min-width: 768px) {
-  .logo {
-    font-size: 64px;
-    line-height: 1;
+  .logo .drained-planet-m {
+    display: none;
   }
 }
 
 @media screen and (min-width: 1530px) {
-  .logo {
-    font-size: 64px;
-    line-height: 1;
+  .logo .drained-planet-m {
+    display: none;
+  }
+}
+
+.logo .drained-planet-d {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .logo .drained-planet-d {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1530px) {
+  .logo .drained-planet-d {
+    display: block;
   }
 }
 
 .mint {
-  font-family: Raleway, cursive;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 1;
-  color: #FFFFFF;
-  padding: 20px 54px;
+  padding: 24.5px 54px;
   text-decoration: none;
   background-color: #000000;
 }

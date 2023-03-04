@@ -1,27 +1,57 @@
 .logo {
   // font-family: 'Chenile Deluxe DEMO';
   display: flex;
-  font-family: Raleway, cursive;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 1;
+  // font-family: Raleway, cursive;
+  // font-style: normal;
+  // font-weight: 500;
+  // font-size: 48px;
+  // line-height: 1;
   text-decoration: none;
   color: #000000;
 }
 
 .logo {
   @media screen and (min-width: 768px) {
-    font-size: 64px;
-    line-height: 1;
+    // font-size: 64px;
+    // line-height: 1;
   }
 }
 
 .logo {
   @media screen and (min-width: 1530px) {
-    font-size: 64px;
-    line-height: 1;
+    // font-size: 64px;
+    // line-height: 1;
   }
 }
 
+.logo .drained-planet-m {
+  display: block;
+}
 
+.logo .drained-planet-m {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.logo .drained-planet-m {
+  @media screen and (min-width: 1530px) {
+    display: none;
+  }
+}
+
+.logo .drained-planet-d {
+  display: none;
+}
+
+.logo .drained-planet-d {
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.logo .drained-planet-d {
+  @media screen and (min-width: 1530px) {
+    display: block;
+  }
+}
