@@ -490,7 +490,6 @@ p {
 
 .motion-container {
   position: relative;
-  border: 1px solid red;
 }
 
 #svg-container {
@@ -572,6 +571,12 @@ p {
 }
 
 #selected-image-text {
+  font-family: "Merienda", cursive;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+  color: #ffffff;
   position: absolute;
   top: 90px;
   left: 50%;
@@ -584,13 +589,13 @@ p {
 
 @media screen and (min-width: 768px) {
   #selected-image-text {
-    top: -30px;
+    top: -60px;
   }
 }
 
 @media screen and (min-width: 1530px) {
   #selected-image-text {
-    top: 570px;
+    top: 540px;
   }
 }
 
