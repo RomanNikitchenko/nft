@@ -1,10 +1,8 @@
-const colors = ['#ff66b2', '#ffcb69', '#a0ff69', '#69fff8', '#6978ff', '#B5FEC7'];
-let currentIndex = 0;
+const colors = ['#B5FEC7', '#ff66b2', '#ffcb69', '#a0ff69', '#69fff8', '#6978ff'];
 
 //функцию для смемы цвета фона  
-const changeBackgroundColor = () => {
-  document.body.style.backgroundColor = colors[currentIndex];
-  currentIndex = (currentIndex + 1) % colors.length;
+const changeBackgroundColor = (currentIndex) => {
+  document.body.style.backgroundColor = colors[currentIndex] ? colors[currentIndex] : '#B5FEC7';
 }
 
 export { changeBackgroundColor };

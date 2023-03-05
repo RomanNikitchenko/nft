@@ -30,7 +30,7 @@ const switchImages = (imageMini = null) => {
     }
 
     //меняем цвет фона
-    changeBackgroundColor();
+    changeBackgroundColor(currentIndex);
 
     // Обновить содержимое блока с текстом выбранного изображения
     updateSelectedImageText();
@@ -46,8 +46,12 @@ const switchImages = (imageMini = null) => {
   }
 }
 
+//меняем цвет фона
+changeBackgroundColor(currentIndex);
+
 // Обновить содержимое блока с текстом выбранного изображения
 updateSelectedImageText();
+
 
 // Добавить обработчик кликов на кнопку
 const handleImageClick = (e) => {
