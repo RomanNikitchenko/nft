@@ -490,6 +490,7 @@ p {
 
 .motion-container {
   position: relative;
+  border: 1px solid red;
 }
 
 #svg-container {
@@ -568,6 +569,29 @@ p {
 
 .border {
   border: 1px solid red;
+}
+
+#selected-image-text {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  #selected-image-text {
+    top: -30px;
+  }
+}
+
+@media screen and (min-width: 1530px) {
+  #selected-image-text {
+    top: 570px;
+  }
 }
 
 .page-footer {

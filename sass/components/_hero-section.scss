@@ -35,6 +35,7 @@
 
 .motion-container {
   position: relative;
+  border: 1px solid red;
 }
 
 #svg-container{
@@ -112,4 +113,25 @@
 
 .border {
   border: 1px solid red;
+}
+
+#selected-image-text {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#selected-image-text {
+  @media screen and (min-width: 768px) {
+    top: -30px;
+  }
+}
+
+#selected-image-text {
+  @media screen and (min-width: 1530px) {
+    top: 570px;
+  }
 }

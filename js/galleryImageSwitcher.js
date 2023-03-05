@@ -1,5 +1,7 @@
 import { changeBackgroundColor } from './changeBackgroundColor.js';
 // import { selectImageBox } from './selectImageBox.js';
+import { updateSelectedImageText } from './updateSelectedImageText.js';
+
 
 const images = document.querySelectorAll('.gallery__image');
 
@@ -28,7 +30,10 @@ const switchImages = (imageMini = null) => {
     }
 
     //меняем цвет фона
-    changeBackgroundColor()
+    changeBackgroundColor();
+
+    // Обновить содержимое блока с текстом выбранного изображения
+    updateSelectedImageText();
 
     //выбранные элементы получают класс border
     // selectImageBox(currentIndex);
@@ -40,6 +45,9 @@ const switchImages = (imageMini = null) => {
     }, 1000);
   }
 }
+
+// Обновить содержимое блока с текстом выбранного изображения
+updateSelectedImageText();
 
 // Добавить обработчик кликов на кнопку
 const handleImageClick = (e) => {
