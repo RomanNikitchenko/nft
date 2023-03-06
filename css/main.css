@@ -307,9 +307,9 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .conteiner {
-    width: 1530px;
+    width: 1300px;
   }
 }
 
@@ -324,7 +324,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .page-header {
     padding-top: 44px;
   }
@@ -350,7 +350,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .main-nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -380,7 +380,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .logo .logo__icon {
     width: 398px;
     height: 64px;
@@ -400,7 +400,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .mint {
     padding: 20px 54px;
   }
@@ -422,7 +422,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .main-nav .mint {
     display: block;
   }
@@ -443,7 +443,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .motion-container .mint {
     display: none;
   }
@@ -499,7 +499,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .hero-section {
     padding: 69px 0 8px;
   }
@@ -522,7 +522,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .page-hero__conteiner {
     padding: 60px 0;
   }
@@ -556,7 +556,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .box {
     left: -60px;
     top: -60px;
@@ -584,7 +584,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .gallery {
     width: 422px;
     height: 422px;
@@ -633,7 +633,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   #selected-image-text {
     top: 540px;
   }
@@ -649,7 +649,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .page-footer {
     padding-bottom: 64px;
   }
@@ -672,7 +672,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1530px) {
+@media screen and (min-width: 1300px) {
   .page-footer__conteiner {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
