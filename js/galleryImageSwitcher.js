@@ -1,4 +1,4 @@
-import { changeBackgroundColor } from './changeBackgroundColor.js';
+// import { changeBackgroundColor } from './changeBackgroundColor.js';
 // import { selectImageBox } from './selectImageBox.js';
 import { updateSelectedImageText } from './updateSelectedImageText.js';
 
@@ -30,7 +30,7 @@ const switchImages = (imageMini = null) => {
     }
 
     //меняем цвет фона
-    changeBackgroundColor(currentIndex);
+    // changeBackgroundColor();
 
     // Обновить содержимое блока с текстом выбранного изображения
     updateSelectedImageText();
@@ -47,7 +47,7 @@ const switchImages = (imageMini = null) => {
 }
 
 //меняем цвет фона
-changeBackgroundColor(currentIndex);
+// changeBackgroundColor(currentIndex);
 
 // Обновить содержимое блока с текстом выбранного изображения
 updateSelectedImageText();

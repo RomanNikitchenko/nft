@@ -264,10 +264,14 @@ summary {
 /* placeholders */
 body {
   color: #757575;
-  background-color: #B5FEC7;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
+  background-color: #000000;
+  background-image: url(../../images/starry-sky.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
   -webkit-transition: background-color 1s ease-in-out;
   transition: background-color 1s ease-in-out;
 }
@@ -391,7 +395,7 @@ p {
   display: block;
   padding: 20px 59.5px;
   text-decoration: none;
-  background-color: #000000;
+  background-color: #FFFFFF;
 }
 
 @media screen and (min-width: 768px) {

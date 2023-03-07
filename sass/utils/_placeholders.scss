@@ -1,10 +1,14 @@
 /* placeholders */
 %body {
   color: $primary-text-color;
-  background-color: $bg-color-page;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
+  background-color: $bg-color-page;
+  background-image: url(../../images/starry-sky.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
   transition: background-color 1s ease-in-out;
 }
 body {
