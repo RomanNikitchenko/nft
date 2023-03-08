@@ -563,6 +563,28 @@ body {
   }
 }
 
+.mini-image {
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.mini-image.small {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.mini-image.medium {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.mini-image.large {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .gallery {
   overflow: hidden;
   position: absolute;

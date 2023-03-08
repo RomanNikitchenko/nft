@@ -1,6 +1,7 @@
-// import { changeBackgroundColor } from './changeBackgroundColor.js';
 // import { selectImageBox } from './selectImageBox.js';
 import { updateSelectedImageText } from './updateSelectedImageText.js';
+import { scaleTarget } from './scaleTarget.js';
+
 
 const images = document.querySelectorAll('.gallery__image');
 
@@ -27,8 +28,8 @@ const switchImages = (imageMini = null) => {
       images[currentIndex].classList.remove('hidden');
     }
 
-    //меняем цвет фона
-    // changeBackgroundColor();
+    //изменить размер элементов
+    scaleTarget();
 
     // Обновить содержимое блока с текстом выбранного изображения
     updateSelectedImageText();
@@ -42,9 +43,6 @@ const switchImages = (imageMini = null) => {
     }, 1000);
   }
 };
-
-//меняем цвет фона
-// changeBackgroundColor(currentIndex);
 
 // Обновить содержимое блока с текстом выбранного изображения
 updateSelectedImageText();

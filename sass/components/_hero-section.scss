@@ -71,6 +71,22 @@
   }
 }
 
+.mini-image {
+  transition: transform 1s ease-in-out;
+}
+
+.mini-image.small{
+  transform: scale(0.8);
+}
+
+.mini-image.medium{
+  transform: scale(1);
+}
+
+.mini-image.large{
+  transform: scale(1.2);
+}
+
 // gallery images
 .gallery {
   overflow: hidden;
