@@ -3,6 +3,8 @@
 @import './utils/placeholders';
 @import './utils/breakpoints';
 @import './utils/mixins';
+//body
+@import './components/body'; 
 // header
 @import './components/page-header'; 
 @import './components/main-nav'; 

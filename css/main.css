@@ -267,13 +267,6 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
-  background-color: #000000;
-  background-image: url(../../images/starry-sky.jpg);
-  background-repeat: repeat;
-  background-position: center;
-  background-size: contain;
-  -webkit-transition: background-color 1s ease-in-out;
-  transition: background-color 1s ease-in-out;
 }
 
 img {
@@ -318,6 +311,14 @@ p {
 }
 
 /* mixins */
+body {
+  background-color: #000000;
+  background-image: url(../images/starry-sky.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 .page-header {
   padding-top: 54px;
 }
