@@ -304,7 +304,7 @@ p {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .conteiner {
     width: 1320px;
   }
@@ -329,7 +329,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .page-header {
     padding-top: 44px;
   }
@@ -355,7 +355,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .main-nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -385,7 +385,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .logo .logo__icon {
     width: 398px;
     height: 64px;
@@ -405,7 +405,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .mint {
     padding: 20px 54px;
   }
@@ -427,7 +427,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .main-nav .mint {
     display: block;
   }
@@ -448,7 +448,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .motion-container .mint {
     display: none;
   }
@@ -496,7 +496,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .hero-section {
     padding: 69px 0 8px;
   }
@@ -519,7 +519,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .page-hero__conteiner {
     padding: 60px 0;
   }
@@ -553,7 +553,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .box {
     left: -75px;
     top: -75px;
@@ -581,7 +581,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .gallery {
     width: 422px;
     height: 422px;
@@ -630,7 +630,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   #selected-image-text {
     top: 540px;
   }
@@ -646,7 +646,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .page-footer {
     padding-bottom: 64px;
   }
@@ -669,7 +669,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1320px) {
   .page-footer__conteiner {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
