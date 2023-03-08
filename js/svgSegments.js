@@ -58,14 +58,39 @@
     var pathLength = Snap.path.getTotalLength(path);
 
     // Разбиение path на 6 сегментов
-    var segmentLengths = [
-      pathLength * 0.1,
-      pathLength * 0.3,
-      pathLength * 0.1,
-      pathLength * 0.1,
-      pathLength * 0.3,
-      pathLength * 0.1,
-    ];
+    var segmentLengths = [];
+
+    if (screenWidth <= 767) {
+      // Для экранов шириной до 767 пикселей (мобильные)
+      segmentLengths = [
+        pathLength * 0.1,
+        pathLength * 0.3,
+        pathLength * 0.1,
+        pathLength * 0.1,
+        pathLength * 0.3,
+        pathLength * 0.1,
+      ];
+    } else if (screenWidth >= 768 && screenWidth <= 1319) {
+      // Для экранов шириной до 1529 пикселей (планшеты)
+      segmentLengths = [
+        pathLength * 0.15,
+        pathLength * 0.2,
+        pathLength * 0.15,
+        pathLength * 0.15,
+        pathLength * 0.2,
+        pathLength * 0.15,
+      ];
+    } else if (screenWidth >= 1320) {
+      // Для экранов шириной больше 1530 пикселей (десктопы)
+      segmentLengths = [
+        pathLength * 0.165,
+        pathLength * 0.17,
+        pathLength * 0.165,
+        pathLength * 0.165,
+        pathLength * 0.17,
+        pathLength * 0.165,
+      ];
+    }
 
     // Получение начала и конца каждого сегмента
     var segmentStartsAndEnds = [];
