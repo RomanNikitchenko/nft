@@ -1,5 +1,6 @@
 .hero-section {
   padding: 72px 0 102px;
+  overflow: hidden;
 }
 
 .hero-section {
@@ -9,7 +10,7 @@
 }
 
 .hero-section {
-  @media screen and (min-width: 1320px) {
+  @media screen and (min-width: 1300px) {
     padding: 69px 0 8px;
   }
 }
@@ -17,7 +18,6 @@
 .page-hero__conteiner{
   display: flex;
   justify-content: center;
-  overflow: hidden;
   padding: 43px 0;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .page-hero__conteiner {
-  @media screen and (min-width: 1320px) {
+  @media screen and (min-width: 1300px) {
     padding: 60px 0;
   }
 }
@@ -63,7 +63,7 @@
 }
 
 .box {
-  @media screen and (min-width: 1320px) {
+  @media screen and (min-width: 1300px) {
     left: -75px;
     top: -75px;
     width: 150px;
@@ -91,7 +91,7 @@
 }
 
 .gallery {
-  @media screen and (min-width: 1320px) {
+  @media screen and (min-width: 1300px) {
       width: 422px;
       height: 422px;
     }
@@ -136,7 +136,7 @@
 }
 
 #selected-image-text {
-  @media screen and (min-width: 1320px) {
+  @media screen and (min-width: 1300px) {
     top: 540px;
   }
 }

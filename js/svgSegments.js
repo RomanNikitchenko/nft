@@ -15,7 +15,7 @@
       pathStrokeDasharray = '36 36';
       pathD =
         'M300 593C134.807 593 1 460.536 1 297S134.807 1 300 1s299 132.464 299 296-133.807 296-299 296z';
-    } else if (screenWidth >= 768 && screenWidth <= 1319) {
+    } else if (screenWidth >= 768 && screenWidth <= 1299) {
       // Для экранов шириной до 1529 пикселей (планшеты)
       svgWidth = '674';
       svgHeight = '354';
@@ -25,7 +25,7 @@
       pathStrokeDasharray = '1 10';
       pathD =
         'M1200.05 251.826C1219.24 420.729 967.427 588.014 637.624 625.468C307.82 662.923 24.9125 556.362 5.73108 387.459C-13.4504 218.556 238.358 51.2707 568.162 13.8166C897.965 -23.6375 1180.87 82.923 1200.05 251.826Z';
-    } else if (screenWidth >= 1320) {
+    } else if (screenWidth >= 1300) {
       // Для экранов шириной больше 1530 пикселей (десктопы)
       svgWidth = '1210';
       svgHeight = '639';
@@ -70,7 +70,7 @@
         pathLength * 0.3,
         pathLength * 0.1,
       ];
-    } else if (screenWidth >= 768 && screenWidth <= 1319) {
+    } else if (screenWidth >= 768 && screenWidth <= 1299) {
       // Для экранов шириной до 1529 пикселей (планшеты)
       segmentLengths = [
         pathLength * 0.15,
@@ -80,7 +80,7 @@
         pathLength * 0.2,
         pathLength * 0.15,
       ];
-    } else if (screenWidth >= 1320) {
+    } else if (screenWidth >= 1300) {
       // Для экранов шириной больше 1530 пикселей (десктопы)
       segmentLengths = [
         pathLength * 0.165,

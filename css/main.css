@@ -304,9 +304,9 @@ p {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .conteiner {
-    width: 1320px;
+    width: 1300px;
   }
 }
 
@@ -329,7 +329,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .page-header {
     padding-top: 44px;
   }
@@ -355,7 +355,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .main-nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -385,7 +385,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .logo .logo__icon {
     width: 398px;
     height: 64px;
@@ -405,7 +405,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .mint {
     padding: 20px 54px;
   }
@@ -427,7 +427,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .main-nav .mint {
     display: block;
   }
@@ -448,7 +448,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .motion-container .mint {
     display: none;
   }
@@ -488,6 +488,7 @@ body {
 
 .hero-section {
   padding: 72px 0 102px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -496,7 +497,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .hero-section {
     padding: 69px 0 8px;
   }
@@ -509,7 +510,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
   padding: 43px 0;
 }
 
@@ -519,7 +519,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .page-hero__conteiner {
     padding: 60px 0;
   }
@@ -553,7 +553,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .box {
     left: -75px;
     top: -75px;
@@ -581,7 +581,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .gallery {
     width: 422px;
     height: 422px;
@@ -630,7 +630,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   #selected-image-text {
     top: 540px;
   }
@@ -646,7 +646,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .page-footer {
     padding-bottom: 64px;
   }
@@ -669,7 +669,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1320px) {
+@media screen and (min-width: 1300px) {
   .page-footer__conteiner {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
