@@ -1,6 +1,6 @@
 body {
     background-color: $bg-color-page;
-    background-image: url(../images/starry-sky.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/starry-sky.jpg);
     background-repeat: repeat;
     background-position: center;
     background-size: contain;
