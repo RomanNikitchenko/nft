@@ -609,21 +609,21 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 320px;
-  height: 320px;
+  height: 600px;
   cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
   .gallery {
     width: 280px;
-    height: 280px;
+    height: 600px;
   }
 }
 
 @media screen and (min-width: 1300px) {
   .gallery {
     width: 422px;
-    height: 422px;
+    height: 600px;
   }
 }
 
@@ -639,7 +639,7 @@ body {
 }
 
 .gallery__image:nth-child(1) {
-  top: 30%;
+  top: 40%;
 }
 
 .gallery__image.hidden {
