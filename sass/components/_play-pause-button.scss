@@ -1,6 +1,39 @@
+.music-player {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music-player {
+    @media screen and (min-width: 428px) {
+        margin-left: 12px;
+    }
+}
+
+.music {
+    font-family: "Merienda", cursive;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1;
+    color: #fff;
+}
+
+.music-player {
+    @media screen and (min-width: 768px) {
+        margin: 0;
+    }
+}
+
+.music-player {
+    @media screen and (min-width: 1300px) {
+        margin: 0;
+    }
+}
+
 .audio-control-button {
     padding: 0;
-    margin: 0 21px 0 32px;
     width: 44px;
     height: 44px;
     position: relative;
@@ -9,13 +42,13 @@
     background-color: $bg-color-white;
     cursor: pointer;
     transition: background-color 250ms ease-in-out;
+    margin: 10px 21px 21px 21px;
 }
 
 .audio-control-button {
     @media screen and (min-width: 768px) {
         width: 64px;
         height: 64px;
-        margin: 0;
     }
 }
 
@@ -23,7 +56,6 @@
     @media screen and (min-width: 1300px) {
         width: 64px;
         height: 64px;
-        margin: 0;
     }
 }
 
