@@ -321,7 +321,7 @@ body {
 }
 
 .page-header {
-  padding-top: 54px;
+  padding-top: 70px;
 }
 
 @media screen and (min-width: 768px) {
@@ -437,7 +437,7 @@ body {
 .motion-container .mint {
   display: block;
   position: absolute;
-  bottom: 0px;
+  bottom: -180px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
@@ -488,7 +488,7 @@ body {
 }
 
 .hero-section {
-  padding: 72px 0 102px;
+  padding: 72px 0 235px;
   overflow: hidden;
 }
 
