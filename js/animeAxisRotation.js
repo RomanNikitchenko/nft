@@ -113,7 +113,7 @@
   };
 
   document.body.addEventListener('click', toggleElementsAnimation);
-  window.addEventListener('touchstart', toggleElementsAnimation);
+  // window.addEventListener('touchstart', toggleElementsAnimation);
 
   const screenWidthReset = () => {
     path1 = anime.path('#svg_1');
