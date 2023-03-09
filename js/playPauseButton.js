@@ -37,6 +37,7 @@ function checkPlayability(event) {
   if (event.target === pauseButtonIcon) return;
   if (event.target === playButtonIconUse) return;
   if (event.target === pauseButtonIconUse) return;
+  if (!event.target.classList.contains('image')) return;
 
   if (audio.paused) {
     audio.play();
