@@ -315,9 +315,25 @@ body {
   background-color: #000000;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/starry-sky.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/starry-sky.jpg);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
 
 .page-header {
@@ -622,6 +638,10 @@ body {
   transition: opacity 1s ease-in-out;
 }
 
+.gallery__image:nth-child(1) {
+  top: 30%;
+}
+
 .gallery__image.hidden {
   opacity: 0;
 }
@@ -634,11 +654,11 @@ body {
   font-family: "Merienda", cursive;
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 1;
-  color: #ffffff;
+  color: #fff;
   position: absolute;
-  top: 90px;
+  top: 455px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
@@ -649,13 +669,15 @@ body {
 
 @media screen and (min-width: 768px) {
   #selected-image-text {
-    top: -60px;
+    top: -70px;
+    left: 32%;
   }
 }
 
 @media screen and (min-width: 1300px) {
   #selected-image-text {
-    top: 540px;
+    top: 510px;
+    left: 45%;
   }
 }
 

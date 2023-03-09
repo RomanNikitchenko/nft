@@ -122,6 +122,10 @@
   transition: opacity 1s ease-in-out;
 }
 
+.gallery__image:nth-child(1) {
+  top: 30%;
+}
+
 .gallery__image.hidden {
   opacity: 0;
 }
@@ -134,11 +138,11 @@
   font-family: "Merienda", cursive;
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 1;
-  color: $text-color-white;
+  color: #fff;
   position: absolute;
-  top: 90px;
+  top: 455px;
   left: 50%;
   transform: translate(-50%, 0);
   opacity: 0;
@@ -147,12 +151,14 @@
 
 #selected-image-text {
   @media screen and (min-width: 768px) {
-    top: -60px;
+    top: -70px;
+    left: 32%;
   }
 }
 
 #selected-image-text {
   @media screen and (min-width: 1300px) {
-    top: 540px;
+    top: 510px;
+    left: 45%;
   }
 }

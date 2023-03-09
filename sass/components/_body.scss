@@ -1,7 +1,23 @@
 body {
     background-color: $bg-color-page;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/starry-sky.jpg);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
+}
+
+body {
+    @media screen and (min-width: 768px) {
+        background-repeat: repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}
+
+body {
+    @media screen and (min-width: 1300px) {
+        background-repeat: repeat;
+        background-position: center;
+        background-size: contain;
+    }
 }

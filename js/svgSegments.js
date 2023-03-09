@@ -8,7 +8,7 @@
     if (screenWidth <= 767) {
       // Для экранов шириной до 767 пикселей (мобильные)
       svgWidth = '1013';
-      svgHeight = '589';
+      svgHeight = '592';
       svgViewBox = '0 0 1013 576';
       patStrokeWidth = '10';
       patStroke = '#CBCBCB';
@@ -20,9 +20,9 @@
       svgWidth = '674';
       svgHeight = '354';
       svgViewBox = '0 0 1206 639';
-      patStrokeWidth = '3';
+      patStrokeWidth = '10';
       patStroke = '#CBCBCB';
-      pathStrokeDasharray = '1 10';
+      pathStrokeDasharray = '1 36';
       pathD =
         'M1200.05 251.826C1219.24 420.729 967.427 588.014 637.624 625.468C307.82 662.923 24.9125 556.362 5.73108 387.459C-13.4504 218.556 238.358 51.2707 568.162 13.8166C897.965 -23.6375 1180.87 82.923 1200.05 251.826Z';
     } else if (screenWidth >= 1300) {
@@ -30,9 +30,9 @@
       svgWidth = '1210';
       svgHeight = '639';
       svgViewBox = '0 0 1206 639';
-      patStrokeWidth = '3';
+      patStrokeWidth = '10';
       patStroke = '#CBCBCB';
-      pathStrokeDasharray = '1 10';
+      pathStrokeDasharray = '1 36';
       pathD =
         'M1200.05 251.826C1219.24 420.729 967.427 588.014 637.624 625.468C307.82 662.923 24.9125 556.362 5.73108 387.459C-13.4504 218.556 238.358 51.2707 568.162 13.8166C897.965 -23.6375 1180.87 82.923 1200.05 251.826Z';
     }
@@ -63,12 +63,12 @@
     if (screenWidth <= 767) {
       // Для экранов шириной до 767 пикселей (мобильные)
       segmentLengths = [
-        pathLength * 0.08,
-        pathLength * 0.34,
-        pathLength * 0.08,
-        pathLength * 0.08,
-        pathLength * 0.34,
-        pathLength * 0.08,
+        pathLength * 0.07,
+        pathLength * 0.36,
+        pathLength * 0.07,
+        pathLength * 0.07,
+        pathLength * 0.36,
+        pathLength * 0.07,
       ];
     } else if (screenWidth >= 768 && screenWidth <= 1299) {
       // Для экранов шириной до 1529 пикселей (планшеты)
