@@ -17,16 +17,18 @@
 .page-footer__conteiner {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .page-footer__conteiner {
   @media screen and (min-width: 768px) {
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 }
 
 .page-footer__conteiner {
   @media screen and (min-width: 1300px) {
-      justify-content: flex-start;
+      justify-content: space-between;
   }
 }
