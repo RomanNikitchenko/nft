@@ -7,14 +7,14 @@
     // Определение ширины, высоты и path для каждого экрана
     if (screenWidth <= 767) {
       // Для экранов шириной до 767 пикселей (мобильные)
-      svgWidth = '600';
-      svgHeight = '594';
-      svgViewBox = '0 0 600 594';
-      patStrokeWidth = '1';
+      svgWidth = '1013';
+      svgHeight = '589';
+      svgViewBox = '0 0 1013 576';
+      patStrokeWidth = '10';
       patStroke = '#CBCBCB';
-      pathStrokeDasharray = '36 36';
+      pathStrokeDasharray = '1 36';
       pathD =
-        'M300 593C134.807 593 1 460.536 1 297S134.807 1 300 1s299 132.464 299 296-133.807 296-299 296z';
+        'M514.515 578C391.146 574.269 262.602 539.538 164.916 483.516C67.2088 427.482 0.499939 350.231 0.499939 261.5C0.499939 204.743 43.7141 137.812 125.829 86.012C207.921 34.2269 328.821 -2.37927 483.987 1.4999C639.162 5.37928 771.195 45.8596 864.418 105.395C957.654 164.938 1012 243.487 1012 323.5C1012 403.474 954.576 469.112 863.592 513.773C772.62 558.427 648.205 582.044 514.515 578Z';
     } else if (screenWidth >= 768 && screenWidth <= 1299) {
       // Для экранов шириной до 1529 пикселей (планшеты)
       svgWidth = '674';
@@ -63,12 +63,12 @@
     if (screenWidth <= 767) {
       // Для экранов шириной до 767 пикселей (мобильные)
       segmentLengths = [
-        pathLength * 0.1,
-        pathLength * 0.3,
-        pathLength * 0.1,
-        pathLength * 0.1,
-        pathLength * 0.3,
-        pathLength * 0.1,
+        pathLength * 0.08,
+        pathLength * 0.34,
+        pathLength * 0.08,
+        pathLength * 0.08,
+        pathLength * 0.34,
+        pathLength * 0.08,
       ];
     } else if (screenWidth >= 768 && screenWidth <= 1299) {
       // Для экранов шириной до 1529 пикселей (планшеты)
