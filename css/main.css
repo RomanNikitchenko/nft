@@ -473,9 +473,9 @@ body {
 
 .audio-control-button {
   padding: 0;
-  margin: 0;
-  width: 72px;
-  height: 72px;
+  margin: 0 32px;
+  width: 44px;
+  height: 44px;
   position: relative;
   border-radius: 50%;
   border: none;
@@ -483,6 +483,22 @@ body {
   cursor: pointer;
   -webkit-transition: background-color 250ms ease-in-out;
   transition: background-color 250ms ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .audio-control-button {
+    width: 64px;
+    height: 64px;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .audio-control-button {
+    width: 64px;
+    height: 64px;
+    margin: 0;
+  }
 }
 
 .play-button__icon,
