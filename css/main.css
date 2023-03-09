@@ -618,7 +618,6 @@ body {
 }
 
 .gallery {
-  border: 1px solid;
   overflow: hidden;
   position: absolute;
   top: 50%;
