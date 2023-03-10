@@ -263,7 +263,7 @@ summary {
 
 @font-face {
   font-family: 'Reef';
-  src: url("/fonts/Reef.otf") format("opentype");
+  src: url("../fonts/Reef.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
