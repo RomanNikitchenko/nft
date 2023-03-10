@@ -1,7 +1,4 @@
-// import { selectImageBox } from './selectImageBox.js';
 import { updateSelectedImageText } from './updateSelectedImageText.js';
-import { scaleTarget } from './scaleTarget.js';
-
 
 const images = document.querySelectorAll('.gallery__image');
 
@@ -28,14 +25,8 @@ const switchImages = (imageMini = null) => {
       images[currentIndex].classList.remove('hidden');
     }
 
-    //изменить размер элементов
-    scaleTarget();
-
     // Обновить содержимое блока с текстом выбранного изображения
     updateSelectedImageText();
-
-    //выбранные элементы получают класс border
-    // selectImageBox(currentIndex);
 
     // Добавить анимацию для скрытия и показа изображений
     setTimeout(() => {
