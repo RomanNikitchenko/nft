@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
     <!-- Подключение шрифта Merienda через Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet"> -->
 
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
@@ -29,7 +29,7 @@
                 <!--логотип хедер-->
                 <a href="" class="logo">
                     <svg class="logo__icon">
-                        <use href="./images/icons.svg#Drained-Planet"></use>
+                        <use href="./images/icons.svg#Drained-Planets"></use>
                     </svg>
                 </a>
 
@@ -126,12 +126,6 @@
                                 <img src="./images/320x320-6.png" class="image gallery__image hidden" data-id="6" alt="The journey begins.">
                             </picture>
                         </div>
-
-                        <a href="" class="mint">
-                            <svg class="mint__icon" width="61" height="28.7">
-                                <use href="./images/icons.svg#Mint"></use>
-                            </svg>
-                        </a>
                     </div>
                 </div>
         </section>
@@ -168,17 +162,15 @@
                 </li>
             
             </ul>
-            <div class="music-player">
-                <p class="music">music</p>
-                <button id="play-pause-button" class="audio-control-button paused">
-                    <svg class="pause-button__icon hide" width="33" height="33">
-                        <use href="./images/icons.svg#pause"></use>
-                    </svg>
-                    <svg class="play-button__icon" width="24" height="24">
-                        <use href="./images/icons.svg#play"></use>
-                    </svg>
-                </button>
-            </div>
+            
+            <button id="play-pause-button" class="audio-control-button paused">
+                <svg class="pause-button__icon hide" width="33" height="33">
+                    <use href="./images/icons.svg#no-music"></use>
+                </svg>
+                <svg class="play-button__icon" width="37" height="34">
+                    <use href="./images/icons.svg#play-music"></use>
+                </svg>
+            </button>
         </div>
     </footer>
 

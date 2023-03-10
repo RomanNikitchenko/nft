@@ -1,8 +1,9 @@
 .mint {
     display: block;
-    padding: 20px 59.5px;
+    padding: 0 14px;
     text-decoration: none;
-    background-color: #FFFFFF;
+    background-color: transparent;
+    border: none;
 }
 
 .mint {
@@ -19,42 +20,11 @@
 
 .mint .mint__icon{
     display: block;
-    width: 61px;
-    height: 32px;
+    width: 59px;
+    height: 31px;
+    fill: #fff;
 }
 
 .main-nav .mint {
-    display: none;
-}
-
-.main-nav .mint {
-    @media screen and (min-width: 768px) {
-        display: block;
-    }
-}
-
-.main-nav .mint {
-    @media screen and (min-width: 1300px) {
-        display: block;
-    }
-}
-
-.motion-container .mint {
     display: block;
-    position: absolute;
-    bottom: -180px;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.motion-container .mint {
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-}
-
-.motion-container .mint {
-    @media screen and (min-width: 1300px) {
-        display: none;
-    }
 }

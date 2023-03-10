@@ -1,5 +1,5 @@
 .page-footer {
-  padding-bottom: 21px;
+  padding-bottom: 32px;
 }
 
 .page-footer {
@@ -16,19 +16,7 @@
 
 .page-footer__conteiner {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.page-footer__conteiner {
-  @media screen and (min-width: 768px) {
-    justify-content: space-between;
-  }
-}
-
-.page-footer__conteiner {
-  @media screen and (min-width: 1300px) {
-      justify-content: space-between;
-  }
 }

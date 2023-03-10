@@ -2,16 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -32px;
+  margin-left: -20px;
 
   &__item {
-    margin-left: 32px;
+    margin-left: 20px;
   }
 
   &__link {
     display: flex;
-    width: 86px;
-    height: 86px;
+    width: 58px;
+    height: 58px;
     fill: $text-color-white;
   }
 

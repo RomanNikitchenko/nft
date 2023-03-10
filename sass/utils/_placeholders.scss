@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Reef';
+  src: url('/fonts/Reef.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* placeholders */
 %body {
   color: $primary-text-color;
