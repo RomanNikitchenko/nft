@@ -56,11 +56,11 @@ p {
 /* responsive-container */
 %responsive-container {
   @media screen and (min-width: 768px) {
-    width: 768px;
+    max-width: 1100px;
   }
 
   @media screen and (min-width: 1300px) {
-    width: 1300px;
+    max-width: 1530px;
   }
 }
 .conteiner {

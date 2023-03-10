@@ -307,13 +307,13 @@ p {
 /* responsive-container */
 @media screen and (min-width: 768px) {
   .conteiner {
-    width: 768px;
+    max-width: 1100px;
   }
 }
 
 @media screen and (min-width: 1300px) {
   .conteiner {
-    width: 1300px;
+    max-width: 1530px;
   }
 }
 
