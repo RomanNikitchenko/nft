@@ -8,10 +8,11 @@
 /* placeholders */
 %body {
   color: $primary-text-color;
-  font-family: Roboto, sans-serif;
+  font-family: 'Reef', sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
 }
+
 body {
   @extend %body;
 }
