@@ -6,23 +6,25 @@
     border: none;
 }
 
-.mint {
-    @media screen and (min-width: 768px) {
-        padding: 20px 54px;
-    }
-}
-
-.mint {
-    @media screen and (min-width: 1300px) {
-        padding: 20px 54px;
-    }
-}
-
 .mint .mint__icon{
     display: block;
     width: 59px;
     height: 31px;
     fill: #fff;
+}
+
+.mint .mint__icon {
+    @media screen and (min-width: 768px) {
+        width: 105px;
+        height: 41px;
+    }
+}
+
+.mint .mint__icon {
+    @media screen and (min-width: 1300px) {
+        width: 105px;
+        height: 41px;
+    }
 }
 
 .main-nav .mint {

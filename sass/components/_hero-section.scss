@@ -5,13 +5,13 @@
 
 .hero-section {
   @media screen and (min-width: 768px) {
-    padding: 69px 0 8px;
+    padding: 8px 0 8px;
   }
 }
 
 .hero-section {
   @media screen and (min-width: 1300px) {
-    padding: 69px 0 8px;
+    padding: 8px 0 8px;
   }
 }
 
@@ -23,13 +23,13 @@
 
 .page-hero__conteiner {
   @media screen and (min-width: 768px) {
-    padding: 60px 0;
+    padding: 70px 0;
   }
 }
 
 .page-hero__conteiner {
   @media screen and (min-width: 1300px) {
-    padding: 60px 0;
+    padding: 70px 0;
   }
 }
 
@@ -48,8 +48,6 @@
   top: -43px;
   width: 86px;
   height: 86px;
-  border-radius: 40%;
-  overflow: hidden;
   cursor: pointer;
 } 
 
@@ -91,7 +89,7 @@
 .gallery {
   overflow: hidden;
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 320px;
@@ -163,7 +161,7 @@
 
 #selected-image-text {
   @media screen and (min-width: 768px) {
-    top: -70px;
+    top: 240px;
     left: 32%;
   }
 }

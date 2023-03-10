@@ -10,7 +10,7 @@
       svgWidth = '1013';
       svgHeight = '592';
       svgViewBox = '0 0 1013 576';
-      patStrokeWidth = '10';
+      patStrokeWidth = '6';
       patStroke = '#CBCBCB';
       pathStrokeDasharray = '1 36';
       pathD =
@@ -20,7 +20,7 @@
       svgWidth = '674';
       svgHeight = '354';
       svgViewBox = '0 0 1206 639';
-      patStrokeWidth = '10';
+      patStrokeWidth = '6';
       patStroke = '#CBCBCB';
       pathStrokeDasharray = '1 36';
       pathD =
@@ -30,7 +30,7 @@
       svgWidth = '1210';
       svgHeight = '639';
       svgViewBox = '0 0 1206 639';
-      patStrokeWidth = '10';
+      patStrokeWidth = '6';
       patStroke = '#CBCBCB';
       pathStrokeDasharray = '1 36';
       pathD =
