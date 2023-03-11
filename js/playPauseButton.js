@@ -11,7 +11,7 @@ audio.addEventListener('ended', () => {
   audio.play();
 });
 
-let isPlaying = false;
+var isPlaying = false;
 
 playPauseButton.addEventListener('click', () => {
   isPlaying = true;
@@ -49,4 +49,4 @@ function checkPlayability(event) {
   } 
 }
 
-document.addEventListener('click', checkPlayability);
+document.body.addEventListener('click', checkPlayability);

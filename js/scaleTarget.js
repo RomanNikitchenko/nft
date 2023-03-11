@@ -40,14 +40,15 @@ var screenWidth = window.innerWidth;
 
   const handleImageClick = e => {
     if (isAnimating) return
-    isAnimating = true;
 
     if (e.target.classList.contains('mini-image')) {
+      isAnimating = true;
       currentIndex = currentIndex === 5 ? 0 : currentIndex + 1;
       scaleTarget();
     }
 
     if (e.target.classList.contains('gallery__image')) {
+      isAnimating = true;
       currentIndex = currentIndex === 5 ? 0 : currentIndex + 1;
       scaleTarget();
     }
