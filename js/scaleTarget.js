@@ -39,19 +39,15 @@ var screenWidth = window.innerWidth;
   scaleTarget();
 
   const handleImageClick = e => {
+    if (!e.target.classList.contains("image")) return
+
     if (isAnimating) return
 
-    if (e.target.classList.contains('mini-image')) {
-      isAnimating = true;
-      currentIndex = currentIndex === 5 ? 0 : currentIndex + 1;
-      scaleTarget();
-    }
+    isAnimating = true;
 
-    if (e.target.classList.contains('gallery__image')) {
-      isAnimating = true;
-      currentIndex = currentIndex === 5 ? 0 : currentIndex + 1;
-      scaleTarget();
-    }
+    currentIndex = currentIndex === 5 ? 0 : currentIndex + 1;
+    
+    scaleTarget();
     
     setTimeout(() => {
       isAnimating = false;
