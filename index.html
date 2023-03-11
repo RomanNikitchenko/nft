@@ -7,13 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
-
-    <!-- Подключение Snap.svg через CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
-
-    <!-- Подключение anime.js через CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
@@ -53,74 +46,108 @@
 
                         <div class="box target-1">
                             <picture>
-                                <source media="(min-width: 1300px)" srcset="./images/150x150-1.png">
-                                <source media="(min-width: 768px)" srcset="./images/150x150-1.png">
-                                <img src="./images/86x86-1.png" class="image mini-image" data-mini="1">
+                                <source media="(min-width: 1300px)" data-srcset="./images/150x150-1.png 1x, ./images/320x320-1.png 2x" />
+                                <source media="(min-width: 768px)" data-srcset="./images/150x150-1.png 1x, ./images/320x320-1.png 2x" />
+                                <source media="(max-width: 767px)" data-srcset="./images/86x86-1.png 1x, ./images/150x150-1.png 2x" />
+
+                                <img alt="Discover rare NFTs for free." class="image mini-image lazy" src="./images/21x21-1.png"
+                                    data-src="./images/86x86-1.png" data-mini="1"/>
                             </picture>
                         </div>
                         <div class="box target-2">
                             <picture>
-                                <source media="(min-width: 1300px)" srcset="./images/150x150-2.png">
-                                <source media="(min-width: 768px)" srcset="./images/150x150-2.png">
-                                <img src="./images/86x86-2.png" class="image mini-image" data-mini="2">
+                                <source media="(min-width: 1300px)" data-srcset="./images/150x150-2.png 1x, ./images/320x320-2.png 2x" />
+                                <source media="(min-width: 768px)" data-srcset="./images/150x150-2.png 1x, ./images/320x320-2.png 2x" />
+                                <source media="(max-width: 767px)" data-srcset="./images/86x86-2.png 1x, ./images/150x150-2.png 2x" />
+
+                                <img alt="Discover rare NFTs for free." class="image mini-image lazy" src="./images/21x21-2.png"
+                                    data-src="./images/86x86-2.png" data-mini="2" />
                             </picture>
                         </div>
                         <div class="box target-3">
                             <picture>
-                                <source media="(min-width: 1300px)" srcset="./images/150x150-3.png">
-                                <source media="(min-width: 768px)" srcset="./images/150x150-3.png">
-                                <img src="./images/86x86-3.png" class="image mini-image" data-mini="3">
+                                <source media="(min-width: 1300px)" data-srcset="./images/150x150-3.png 1x, ./images/320x320-3.png 2x" />
+                                <source media="(min-width: 768px)" data-srcset="./images/150x150-3.png 1x, ./images/320x320-3.png 2x" />
+                                <source media="(max-width: 767px)" data-srcset="./images/86x86-3.png 1x, ./images/150x150-3.png 2x" />
+
+                                <img alt="Discover rare NFTs for free." class="image mini-image lazy" src="./images/21x21-3.png"
+                                    data-src="./images/86x86-3.png" data-mini="3" />
                             </picture>
                         </div>
                         <div class="box target-4">
                             <picture>
-                                <source media="(min-width: 1300px)" srcset="./images/150x150-4.png">
-                                <source media="(min-width: 768px)" srcset="./images/150x150-4.png">
-                                <img src="./images/86x86-4.png" class="image mini-image" data-mini="4">
+                                <source media="(min-width: 1300px)" data-srcset="./images/150x150-4.png 1x, ./images/320x320-4.png 2x" />
+                                <source media="(min-width: 768px)" data-srcset="./images/150x150-4.png 1x, ./images/320x320-4.png 2x" />
+                                <source media="(max-width: 767px)" data-srcset="./images/86x86-4.png 1x, ./images/150x150-4.png 2x" />
+
+                                <img alt="Discover rare NFTs for free." class="image mini-image lazy" src="./images/21x21-4.png"
+                                    data-src="./images/86x86-4.png" data-mini="4" />
                             </picture>
                         </div>
                         <div class="box target-5">
                             <picture>
-                                <source media="(min-width: 1300px)" srcset="./images/150x150-5.png">
-                                <source media="(min-width: 768px)" srcset="./images/150x150-5.png">
-                                <img src="./images/86x86-5.png" class="image mini-image" data-mini="5">
+                                <source media="(min-width: 1300px)" data-srcset="./images/150x150-5.png 1x, ./images/320x320-5.png 2x" />
+                                <source media="(min-width: 768px)" data-srcset="./images/150x150-5.png 1x, ./images/320x320-5.png 2x" />
+                                <source media="(max-width: 767px)" data-srcset="./images/86x86-5.png 1x, ./images/150x150-5.png 2x" />
+
+                                <img alt="Discover rare NFTs for free." class="image mini-image lazy" src="./images/21x21-5.png"
+                                    data-src="./images/86x86-5.png" data-mini="5" />
                             </picture>
                         </div>
                         <div class="box target-6">
                             <picture>
-                                <source media="(min-width: 1300px)" srcset="./images/150x150-6.png">
-                                <source media="(min-width: 768px)" srcset="./images/150x150-6.png">
-                                <img src="./images/86x86-6.png" class="image mini-image" data-mini="6">
+                                <source media="(min-width: 1300px)" data-srcset="./images/150x150-6.png 1x, ./images/320x320-6.png 2x" />
+                                <source media="(min-width: 768px)" data-srcset="./images/150x150-6.png 1x, ./images/320x320-6.png 2x" />
+                                <source media="(max-width: 767px)" data-srcset="./images/86x86-6.png 1x, ./images/150x150-6.png 2x" />
+
+                                <img alt="Discover rare NFTs for free." class="image mini-image lazy" src="./images/21x21-6.png"
+                                    data-src="./images/86x86-5.png" data-mini="6" />
                             </picture>
                         </div>
 
+
                         <div class="gallery">
-                            <img src="./images/Doodlcolors-min.gif" class="image gallery__image hidden" data-id="1"
+                            <img data-src="./images/Doodlcolors-min.gif" src="./images/422x422-1.png" class="image gallery__image hidden lazy" data-id="1"
                                 alt="Mint, collect, and conquer.">
                             <picture>
-                                <source media="(min-width: 1300px)" srcset="./images/422x422-2.png">
-                                <source media="(min-width: 768px)" srcset="./images/422x422-2.png">
-                                <img src="./images/320x320-2.png" class="image gallery__image hidden" data-id="2" alt="Discover rare NFTs for free.">
+                                <source media="(min-width: 1300px)" data-srcset="./images/422x422-2.png 1x, ./images/422x422-2.png 2x" />
+                                <source media="(min-width: 768px)" data-srcset="./images/422x422-2.png 1x, ./images/422x422-2.png 2x" />
+                                <source media="(max-width: 767px)" data-srcset="./images/320x320-2.png 1x, ./images/320x320-2.png 2x" />
+
+                                <img data-src="./images/320x320-2.png" src="./images/150x150-2.png" class="image gallery__image hidden lazy"
+                                    data-id="2" alt="Discover rare NFTs for free.">
                             </picture>
                             <picture>
-                                <source media="(min-width: 1300px)" srcset="./images/422x422-3.png">
-                                <source media="(min-width: 768px)" srcset="./images/422x422-3.png">
-                                <img src="./images/320x320-3.png" class="image gallery__image hidden" data-id="3" alt="Roadmap? Check Discord!">
+                                <source media="(min-width: 1300px)" data-srcset="./images/422x422-3.png 1x, ./images/422x422-3.png 2x" />
+                                <source media="(min-width: 768px)" data-srcset="./images/422x422-3.png 1x, ./images/422x422-3.png 2x" />
+                                <source media="(max-width: 767px)" data-srcset="./images/320x320-3.png 1x, ./images/320x320-3.png 2x" />
+                            
+                                <img data-src="./images/320x320-3.png" src="./images/150x150-3.png" class="image gallery__image hidden lazy"
+                                    data-id="3" alt="Discover rare NFTs for free.">
                             </picture>
                             <picture>
-                                <source media="(min-width: 1300px)" srcset="./images/422x422-4.png">
-                                <source media="(min-width: 768px)" srcset="./images/422x422-4.png">
-                                <img src="./images/320x320-4.png" class="image gallery__image hidden" data-id="4" alt="Escape the draining cycle.">
+                                <source media="(min-width: 1300px)" data-srcset="./images/422x422-4.png 1x, ./images/422x422-4.png 2x" />
+                                <source media="(min-width: 768px)" data-srcset="./images/422x422-4.png 1x, ./images/422x422-4.png 2x" />
+                                <source media="(max-width: 767px)" data-srcset="./images/320x320-4.png 1x, ./images/320x320-4.png 2x" />
+                            
+                                <img data-src="./images/320x320-4.png" src="./images/150x150-4.png" class="image gallery__image hidden lazy"
+                                    data-id="4" alt="Discover rare NFTs for free.">
                             </picture>
                             <picture>
-                                <source media="(min-width: 1300px)" srcset="./images/422x422-5.png">
-                                <source media="(min-width: 768px)" srcset="./images/422x422-5.png">
-                                <img src="./images/320x320-5.png" class="image gallery__image hidden" data-id="5" alt="Where crypto meets art.">
+                                <source media="(min-width: 1300px)" data-srcset="./images/422x422-5.png 1x, ./images/422x422-5.png 2x" />
+                                <source media="(min-width: 768px)" data-srcset="./images/422x422-5.png 1x, ./images/422x422-5.png 2x" />
+                                <source media="(max-width: 767px)" data-srcset="./images/320x320-5.png 1x, ./images/320x320-5.png 2x" />
+                            
+                                <img data-src="./images/320x320-5.png" src="./images/150x150-5.png" class="image gallery__image hidden lazy"
+                                    data-id="5" alt="Discover rare NFTs for free.">
                             </picture>
                             <picture>
-                                <source media="(min-width: 1300px)" srcset="./images/422x422-6.png">
-                                <source media="(min-width: 768px)" srcset="./images/422x422-6.png">
-                                <img src="./images/320x320-6.png" class="image gallery__image hidden" data-id="6" alt="The journey begins.">
+                                <source media="(min-width: 1300px)" data-srcset="./images/422x422-6.png 1x, ./images/422x422-6.png 2x" />
+                                <source media="(min-width: 768px)" data-srcset="./images/422x422-6.png 1x, ./images/422x422-6.png 2x" />
+                                <source media="(max-width: 767px)" data-srcset="./images/320x320-6.png 1x, ./images/320x320-6.png 2x" />
+                            
+                                <img data-src="./images/320x320-6.png" src="./images/150x150-6.png" class="image gallery__image hidden lazy"
+                                    data-id="6" alt="Discover rare NFTs for free.">
                             </picture>
                         </div>
                     </div>
@@ -170,6 +197,27 @@
             </button>
         </div>
     </footer>
+
+    <!-- Подключение Snap.svg через CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+    
+    <!-- Подключение anime.js через CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <!-- Подключение vanilla-lazyload через CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+
+    <script>
+        const LazyImage = {
+            elements_selector: ".lazy"
+        };
+
+        if (!document.lazyLoadInstance) {
+            document.lazyLoadInstance = new LazyLoad(LazyImage);
+        }
+
+        document.lazyLoadInstance.update();
+    </script>
 
     <audio id="my-audio" src="./audio/[YT2mp3.info] - Counting Stars (256kbps).mp3"></audio>
     <script src="js/playPauseButton.js"></script>

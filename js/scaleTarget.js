@@ -13,154 +13,25 @@ var screenWidth = window.innerWidth;
     }
 
     if (screenWidth <= 767) {
-      console.log("screenWidth <= 767");
-      if (currentIndex === 0) {
-        images[0].classList.add('large');
-        images[1].classList.add('medium');
-        images[2].classList.add('medium');
-        images[3].classList.add('small');
-        images[4].classList.add('medium');
-        images[5].classList.add('medium');
-      }
-      if (currentIndex === 1) {
-        images[1].classList.add('large');
-        images[2].classList.add('medium');
-        images[3].classList.add('medium');
-        images[4].classList.add('small');
-        images[5].classList.add('medium');
-        images[0].classList.add('medium');
-      }
-      if (currentIndex === 2) {
-        images[2].classList.add('large');
-        images[3].classList.add('medium');
-        images[4].classList.add('medium');
-        images[5].classList.add('small');
-        images[0].classList.add('medium');
-        images[1].classList.add('medium');
-      }
-      if (currentIndex === 3) {
-        images[3].classList.add('large');
-        images[4].classList.add('medium');
-        images[5].classList.add('medium');
-        images[0].classList.add('small');
-        images[1].classList.add('medium');
-        images[2].classList.add('medium');
-      }
-      if (currentIndex === 4) {
-        images[4].classList.add('large');
-        images[5].classList.add('medium');
-        images[0].classList.add('medium');
-        images[1].classList.add('small');
-        images[2].classList.add('medium');
-        images[3].classList.add('medium');
-      }
-      if (currentIndex === 5) {
-        images[5].classList.add('large');
-        images[0].classList.add('medium');
-        images[1].classList.add('medium');
-        images[2].classList.add('small');
-        images[3].classList.add('medium');
-        images[4].classList.add('medium');
+      const classes = ['large', 'medium', 'medium', 'small', 'medium', 'medium'];
+      const imagesCount = images.length;
+      for (let i = 0; i < imagesCount; i++) {
+        const index = (i + currentIndex) % imagesCount;
+        images[index].classList.add(classes[i]);
       }
     } else if (screenWidth >= 768 && screenWidth <= 1299) {
-      console.log("screenWidth >= 768 && screenWidth <= 1299")
-      if (currentIndex === 0) {
-        images[0].classList.add('medium');
-        images[1].classList.add('large');
-        images[2].classList.add('large');
-        images[3].classList.add('medium');
-        images[4].classList.add('small');
-        images[5].classList.add('small');
-      }
-      if (currentIndex === 1) {
-        images[1].classList.add('medium');
-        images[2].classList.add('large');
-        images[3].classList.add('large');
-        images[4].classList.add('medium');
-        images[5].classList.add('small');
-        images[0].classList.add('small');
-      }
-      if (currentIndex === 2) {
-        images[2].classList.add('medium');
-        images[3].classList.add('large');
-        images[4].classList.add('large');
-        images[5].classList.add('medium');
-        images[0].classList.add('small');
-        images[1].classList.add('small');
-      }
-      if (currentIndex === 3) {
-        images[3].classList.add('medium');
-        images[4].classList.add('large');
-        images[5].classList.add('large');
-        images[0].classList.add('medium');
-        images[1].classList.add('small');
-        images[2].classList.add('small');
-      }
-      if (currentIndex === 4) {
-        images[4].classList.add('medium');
-        images[5].classList.add('large');
-        images[0].classList.add('large');
-        images[1].classList.add('medium');
-        images[2].classList.add('small');
-        images[3].classList.add('small');
-      }
-      if (currentIndex === 5) {
-        images[5].classList.add('medium');
-        images[0].classList.add('large');
-        images[1].classList.add('large');
-        images[2].classList.add('medium');
-        images[3].classList.add('small');
-        images[4].classList.add('small');
+      const classes = ['medium', 'large', 'large', 'medium', 'small', 'small'];
+      const imagesCount = images.length;
+      for (let i = 0; i < imagesCount; i++) {
+        const index = (i + currentIndex) % imagesCount;
+        images[index].classList.add(classes[i]);
       }
     } else if (screenWidth >= 1300) {
-      console.log('screenWidth >= 1300')
-      if (currentIndex === 0) {
-        images[0].classList.add('medium');
-        images[1].classList.add('large');
-        images[2].classList.add('large');
-        images[3].classList.add('medium');
-        images[4].classList.add('small');
-        images[5].classList.add('small');
-      }
-      if (currentIndex === 1) {
-        images[1].classList.add('medium');
-        images[2].classList.add('large');
-        images[3].classList.add('large');
-        images[4].classList.add('medium');
-        images[5].classList.add('small');
-        images[0].classList.add('small');
-      }
-      if (currentIndex === 2) {
-        images[2].classList.add('medium');
-        images[3].classList.add('large');
-        images[4].classList.add('large');
-        images[5].classList.add('medium');
-        images[0].classList.add('small');
-        images[1].classList.add('small');
-      }
-      if (currentIndex === 3) {
-        images[3].classList.add('medium');
-        images[4].classList.add('large');
-        images[5].classList.add('large');
-        images[0].classList.add('medium');
-        images[1].classList.add('small');
-        images[2].classList.add('small');
-      }
-      if (currentIndex === 4) {
-        images[4].classList.add('medium');
-        images[5].classList.add('large');
-        images[0].classList.add('large');
-        images[1].classList.add('medium');
-        images[2].classList.add('small');
-        images[3].classList.add('small');
-      }
-      if (currentIndex === 5) {
-        images[5].classList.add('medium');
-        images[0].classList.add('large');
-        images[1].classList.add('large');
-        images[2].classList.add('medium');
-        images[3].classList.add('small');
-        images[4].classList.add('small');
+      const classes = ['medium', 'large', 'large', 'medium', 'small', 'small'];
+      const imagesCount = images.length;
+      for (let i = 0; i < imagesCount; i++) {
+        const index = (i + currentIndex) % imagesCount;
+        images[index].classList.add(classes[i]);
       }
     }
   };

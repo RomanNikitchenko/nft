@@ -571,10 +571,12 @@ body {
 }
 
 .mini-image {
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  -webkit-transition: -webkit-transform 1s ease-in-out, -webkit-filter 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 1s ease-in-out, -webkit-filter 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1s ease-in-out, filter 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1s ease-in-out, filter 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1s ease-in-out, -webkit-filter 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mini-image.small {
@@ -590,6 +592,11 @@ body {
 .mini-image.large {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.mini-image.loaded {
+  -webkit-filter: blur(0);
+          filter: blur(0);
 }
 
 .gallery {

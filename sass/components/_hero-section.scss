@@ -70,7 +70,8 @@
 }
 
 .mini-image {
-  transition: transform 1s ease-in-out;
+  filter: blur(1px);
+  transition: transform 1s ease-in-out, filter 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mini-image.small{
@@ -83,6 +84,10 @@
 
 .mini-image.large{
   transform: scale(1.2);
+}
+
+.mini-image.loaded {
+  filter: blur(0);
 }
 
 // gallery images
