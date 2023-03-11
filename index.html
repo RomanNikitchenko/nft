@@ -108,7 +108,7 @@
 
                         <div class="gallery">
                             <img data-src="./images/Doodlcolors-min.gif" src="./images/422x422-1.png" class="image gallery__image hidden lazy" data-id="1"
-                                alt="Mint, collect, and conquer.">
+                                alt="Mint, collect, and conquer." id="gif-img">
                             <picture>
                                 <source media="(min-width: 1300px)" data-srcset="./images/422x422-2.png 1x, ./images/422x422-2.png 2x" />
                                 <source media="(min-width: 768px)" data-srcset="./images/422x422-2.png 1x, ./images/422x422-2.png 2x" />
@@ -198,6 +198,8 @@
         </div>
     </footer>
 
+    <audio id="my-audio" src="./audio/[YT2mp3.info] - Counting Stars (256kbps).mp3"></audio>
+
     <!-- Подключение Snap.svg через CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
     
@@ -207,26 +209,12 @@
     <!-- Подключение vanilla-lazyload через CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
 
-    <script>
-        const LazyImage = {
-            elements_selector: ".lazy"
-        };
-
-        if (!document.lazyLoadInstance) {
-            document.lazyLoadInstance = new LazyLoad(LazyImage);
-        }
-
-        document.lazyLoadInstance.update();
-    </script>
-
-    <audio id="my-audio" src="./audio/[YT2mp3.info] - Counting Stars (256kbps).mp3"></audio>
-    <script src="js/playPauseButton.js"></script>
-
+    <script src="js/LazyImage.js"></script>
     <script src="js/svgSegments.js"></script>
     <script src="js/animeAxisRotation.js"></script>
     <script src="js/scaleTarget.js"></script>
     <script type="module" src="js/galleryImageSwitcher.js"></script>
-    
+    <script src="js/playPauseButton.js"></script>
 </body>
 
 </html>
