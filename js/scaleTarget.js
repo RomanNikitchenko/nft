@@ -13,12 +13,13 @@
     }
 
     if (screenWidth <= 767) {
-      const classes = ['large', 'medium', 'medium', 'small', 'medium', 'medium'];
-      const imagesCount = images.length;
-      for (let i = 0; i < imagesCount; i++) {
-        const index = (i + currentIndex) % imagesCount;
-        images[index].classList.add(classes[i]);
-      }
+      return;
+      // const classes = ['large', 'medium', 'medium', 'small', 'medium', 'medium'];
+      // const imagesCount = images.length;
+      // for (let i = 0; i < imagesCount; i++) {
+      //   const index = (i + currentIndex) % imagesCount;
+      //   images[index].classList.add(classes[i]);
+      // }
     } else if (screenWidth >= 768 && screenWidth <= 1299) {
       const classes = ['medium', 'large', 'large', 'medium', 'small', 'small'];
       const imagesCount = images.length;

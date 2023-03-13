@@ -570,6 +570,10 @@ body {
   }
 }
 
+.box.target-1 {
+  padding: 5px;
+}
+
 .mini-image {
   -webkit-filter: blur(1px);
           filter: blur(1px);
