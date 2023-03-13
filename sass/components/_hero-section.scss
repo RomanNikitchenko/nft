@@ -130,18 +130,24 @@
 }
 
 .gallery__image:nth-child(1) {
-  top: 40%;
+  top: 41%;
+  left: 49%;
+  padding: 20px;
 }
 
 .gallery__image:nth-child(1) {
   @media screen and (min-width: 768px) {
-    top: 40%;
+    top: 41%;
+    left: 49%;
+    padding: 13px;
   }
 }
 
 .gallery__image:nth-child(1) {
   @media screen and (min-width: 1300px) {
-    top: 40%;
+    top: 41%;
+    left: 49%;
+    padding: 25px;
   }
 }
 
