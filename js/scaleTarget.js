@@ -1,15 +1,15 @@
 (() => {
-const images = document.querySelectorAll('.box img');
+  const images = document.querySelectorAll('.box img');
 
-var currentIndex = 0;
-var isAnimating = false;
-var screenWidth = window.innerWidth;
+  var currentIndex = 0;
+  var isAnimating = false;
+  var screenWidth = window.innerWidth;
 
   function scaleTarget() {
     screenWidth = window.innerWidth;
 
     for (var i = 0; i < images.length; i++) {
-      images[i].classList.remove("small", 'medium', 'large');
+      images[i].classList.remove('small', 'medium', 'large');
     }
 
     if (screenWidth <= 767) {
@@ -34,27 +34,28 @@ var screenWidth = window.innerWidth;
         images[index].classList.add(classes[i]);
       }
     }
-  };
+  }
 
   scaleTarget();
 
   const handleImageClick = e => {
-    if (!e.target.classList.contains("image")) return
+    if (!e.target.classList.contains('image')) return;
 
-    if (isAnimating) return
+    if (isAnimating) return;
 
     isAnimating = true;
 
     currentIndex = currentIndex === 5 ? 0 : currentIndex + 1;
-    
+
     scaleTarget();
-    
+
     setTimeout(() => {
       isAnimating = false;
     }, 1000);
   };
 
   document.body.addEventListener('click', handleImageClick);
-  
+
   window.addEventListener('resize', scaleTarget);
-})(); 
+  window.addEventListener('touchstart', handleImageClick);
+})();
