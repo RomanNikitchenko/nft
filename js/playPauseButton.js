@@ -12,6 +12,7 @@ audio.addEventListener('ended', () => {
 });
 
 var isPlaying = false;
+var screenWidth = window.innerWidth;
 
 playPauseButton.addEventListener('click', () => {
   isPlaying = true;
@@ -30,7 +31,9 @@ playPauseButton.addEventListener('click', () => {
   }
 });
 
-function checkPlayability(event) { 
+function checkPlayability(event) {
+  screenWidth = window.innerWidth;
+  if (screenWidth <= 767) return;
   if (isPlaying) return;
   if (event.target === playPauseButton) return;
   if (event.target === playButtonIcon) return;
@@ -46,7 +49,21 @@ function checkPlayability(event) {
     playPauseButton.classList.remove('paused');
     pauseButtonIcon.classList.remove('hide');
     playButtonIcon.classList.add('hide');
-  } 
+  }
 }
 
 document.body.addEventListener('click', checkPlayability);
+
+function pauseAudioOnMobileScreen() {
+  screenWidth = window.innerWidth;
+  if (screenWidth <= 767) {
+    audio.pause();
+    playPauseButton.classList.add('paused');
+    playPauseButton.classList.remove('playing');
+    pauseButtonIcon.classList.add('hide');
+    playButtonIcon.classList.remove('hide');
+  }
+  return;
+}
+
+window.addEventListener('resize', pauseAudioOnMobileScreen);
