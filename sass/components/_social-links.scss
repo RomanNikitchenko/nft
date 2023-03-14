@@ -2,20 +2,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -20px;
+  margin-left: -32px;
 
   &__item {
-    margin-left: 20px;
+    margin-left: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__link {
     display: flex;
-    width: 58px;
-    height: 58px;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
     fill: $text-color-white;
+
+    @media screen and (min-width: 768px) {
+      width: 86px;
+      height: 86px;
+    }
   }
 
   &__icon {
     margin: auto;
+    width: 25px;
+    height: 25px;
+
+    @media screen and (min-width: 768px) {
+      width: 44px;
+      height: 44px;
+    }
   }
 }

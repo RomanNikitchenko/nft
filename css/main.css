@@ -344,7 +344,7 @@ body {
 }
 
 .page-header {
-  padding-top: 11px;
+  padding-top: 48px;
 }
 
 @media screen and (min-width: 768px) {
@@ -363,9 +363,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -397,13 +397,12 @@ body {
   display: block;
   text-decoration: none;
   color: #000000;
-  padding-left: 18px;
 }
 
 .logo .logo__icon {
   display: block;
-  width: 224px;
-  height: 35px;
+  width: 233px;
+  height: 37px;
 }
 
 @media screen and (min-width: 768px) {
@@ -415,42 +414,98 @@ body {
 
 @media screen and (min-width: 1300px) {
   .logo .logo__icon {
-    width: 398px;
-    height: 64px;
-  }
-}
-
-.mint {
-  display: block;
-  padding: 0 14px;
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-}
-
-.mint .mint__icon {
-  display: block;
-  width: 59px;
-  height: 31px;
-  fill: #fff;
-}
-
-@media screen and (min-width: 768px) {
-  .mint .mint__icon {
-    width: 105px;
-    height: 41px;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  .mint .mint__icon {
-    width: 105px;
-    height: 41px;
+    width: 453px;
+    height: 77px;
   }
 }
 
 .main-nav .mint {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: none;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav .mint {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 142px;
+    height: 56px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .main-nav .mint {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 169px;
+    height: 72px;
+  }
+}
+
+.motion-container .mint {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 142px;
+  height: 56px;
+  position: absolute;
+  left: 50%;
+  bottom: -140px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  text-decoration: none;
+  background: #FFFFFF;
+  border-radius: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .motion-container .mint {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .motion-container .mint {
+    display: none;
+  }
+}
+
+.mint .mint__icon {
   display: block;
+  width: 46px;
+  height: 24px;
+  fill: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .mint .mint__icon {
+    width: 61px;
+    height: 32px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .mint .mint__icon {
+    width: 61px;
+    height: 32px;
+  }
 }
 
 .audio-control-button {
@@ -499,7 +554,7 @@ body {
 }
 
 .hero-section {
-  padding: 8px 0 22px;
+  padding: 58px 0 148px;
   overflow: hidden;
 }
 
@@ -612,8 +667,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 320px;
-  height: 460px;
+  width: 246px;
+  height: 290px;
   cursor: pointer;
 }
 
@@ -643,7 +698,7 @@ body {
 }
 
 .gallery__image:nth-child(1) {
-  top: 41%;
+  top: 40%;
   left: 49%;
   padding: 20px;
 }
@@ -675,11 +730,11 @@ body {
 #selected-image-text {
   font-style: normal;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 18px;
   line-height: 1;
   color: #fff;
   position: absolute;
-  top: 455px;
+  top: 310px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
@@ -690,6 +745,7 @@ body {
 
 @media screen and (min-width: 768px) {
   #selected-image-text {
+    font-size: 26px;
     top: 240px;
     left: 32%;
   }
@@ -697,8 +753,9 @@ body {
 
 @media screen and (min-width: 1300px) {
   #selected-image-text {
-    top: 510px;
-    left: 45%;
+    font-size: 32px;
+    top: 500px;
+    left: 50%;
   }
 }
 
@@ -731,11 +788,25 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer__conteiner {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .page-footer__conteiner {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .social-links {
@@ -748,23 +819,54 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: -20px;
+  margin-left: -32px;
 }
 
 .social-links__item {
-  margin-left: 20px;
+  margin-left: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .social-links__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 58px;
-  height: 58px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 48px;
+  height: 48px;
   fill: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .social-links__link {
+    width: 86px;
+    height: 86px;
+  }
 }
 
 .social-links__icon {
   margin: auto;
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .social-links__icon {
+    width: 44px;
+    height: 44px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

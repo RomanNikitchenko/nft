@@ -1,5 +1,5 @@
 .hero-section {
-  padding: 8px 0 22px;
+  padding: 58px 0 148px;
   overflow: hidden;
 }
 
@@ -101,8 +101,8 @@
   top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 320px;
-  height: 460px;
+  width: 246px;
+  height: 290px;
   cursor: pointer;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .gallery__image:nth-child(1) {
-  top: 41%;
+  top: 40%;
   left: 49%;
   padding: 20px;
 }
@@ -163,11 +163,11 @@
   // font-family: 'Reef', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 18px;
   line-height: 1;
   color: #fff;
   position: absolute;
-  top: 455px;
+  top: 310px;
   left: 50%;
   transform: translate(-50%, 0);
   opacity: 0;
@@ -176,6 +176,7 @@
 
 #selected-image-text {
   @media screen and (min-width: 768px) {
+    font-size: 26px;
     top: 240px;
     left: 32%;
   }
@@ -183,8 +184,9 @@
 
 #selected-image-text {
   @media screen and (min-width: 1300px) {
-    top: 510px;
-    left: 45%;
+    font-size: 32px;
+    top: 500px;
+    left: 50%;
   }
 }
 
