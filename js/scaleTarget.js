@@ -71,7 +71,7 @@
 
     setTimeout(() => {
       isAnimating = false;
-    }, 1000);
+    }, 1300);
   };
 
   window.addEventListener('wheel', scrollScaleTarget);

@@ -1,5 +1,5 @@
 (() => {
-  var disabled = false;
+  var isAnimating = false;
   var limit = 1;
 
   //anime.js
@@ -100,16 +100,16 @@
   const toggleElementsAnimation = e => {
     if (!e.target.classList.contains('image')) return;
 
-    if (disabled) return;
+    if (isAnimating) return;
 
-    disabled = true;
+    isAnimating = true;
 
     byCondition(changePath);
 
     limit = limit === 6 ? 1 : limit + 1;
 
     setTimeout(() => {
-      disabled = false;
+      isAnimating = false;
     }, 1000);
   };
 
@@ -131,17 +131,17 @@
   window.addEventListener('resize', screenWidthReset);
 
   const scrollAnime = () => {
-    if (disabled) return;
+    if (isAnimating) return;
 
-    disabled = true;
+    isAnimating = true;
 
     byCondition(changePath);
 
     limit = limit === 6 ? 1 : limit + 1;
 
     setTimeout(() => {
-      disabled = false;
-    }, 1000);
+      isAnimating = false;
+    }, 1300);
   };
 
   window.addEventListener('wheel', scrollAnime);
