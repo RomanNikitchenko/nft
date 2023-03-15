@@ -1,3 +1,4 @@
+const body = document.querySelector('.page');
 const audio = document.getElementById('my-audio');
 const playPauseButton = document.getElementById('play-pause-button');
 const playButtonIcon = document.querySelector('.play-button__icon');
@@ -12,6 +13,7 @@ audio.addEventListener('ended', () => {
 });
 
 var isPlaying = false;
+let userHasInteracted = false;
 var screenWidth = window.innerWidth;
 
 playPauseButton.addEventListener('click', () => {
@@ -31,7 +33,7 @@ playPauseButton.addEventListener('click', () => {
   }
 });
 
-function checkPlayability(event) {
+const checkPlayability = event => {
   screenWidth = window.innerWidth;
   if (screenWidth <= 767) return;
   if (isPlaying) return;
@@ -50,7 +52,7 @@ function checkPlayability(event) {
     pauseButtonIcon.classList.remove('hide');
     playButtonIcon.classList.add('hide');
   }
-}
+};
 
 document.body.addEventListener('click', checkPlayability);
 
@@ -67,3 +69,34 @@ function pauseAudioOnMobileScreen() {
 }
 
 window.addEventListener('resize', pauseAudioOnMobileScreen);
+
+const handleFirstInteraction = () => {
+  userHasInteracted = true;
+  // Здесь вы можете выполнить любой код, который должен выполниться после первого взаимодействия пользователя со страницей.
+  // Например, вы можете начать загружать дополнительные ресурсы, которые необходимы для воспроизведения аудио.
+};
+
+const handleScrollPlayAudio = e => {
+  screenWidth = window.innerWidth;
+  if (screenWidth <= 767) return;
+  if (isPlaying) return;
+  if (!userHasInteracted) return;
+
+  if (audio.paused) {
+    audio
+      .play()
+      .then(() => {
+        isPlaying = true;
+        playPauseButton.classList.add('playing');
+        playPauseButton.classList.remove('paused');
+        pauseButtonIcon.classList.remove('hide');
+        playButtonIcon.classList.add('hide');
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+};
+
+body.addEventListener('wheel', handleScrollPlayAudio);
+document.addEventListener('click', handleFirstInteraction);

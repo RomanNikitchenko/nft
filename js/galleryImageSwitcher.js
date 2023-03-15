@@ -51,3 +51,5 @@ const handleImageClick = e => {
 
 document.body.addEventListener('click', handleImageClick);
 window.addEventListener('touchstart', handleImageClick);
+
+export { switchImages };
