@@ -39,6 +39,8 @@
 
   scaleTarget();
 
+  window.addEventListener('resize', scaleTarget);
+
   const handleImageClick = e => {
     if (!e.target.classList.contains('image')) return;
 
@@ -56,8 +58,6 @@
   };
 
   document.body.addEventListener('click', handleImageClick);
-
-  window.addEventListener('resize', scaleTarget);
   window.addEventListener('touchstart', handleImageClick);
 
   const scrollScaleTarget = () => {
