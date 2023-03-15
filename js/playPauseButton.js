@@ -4,9 +4,6 @@
   const playButtonIcon = document.querySelector('.play-button__icon');
   const pauseButtonIcon = document.querySelector('.pause-button__icon');
 
-  const playButtonIconUse = document.querySelector('.play-button__icon use');
-  const pauseButtonIconUse = document.querySelector('.pause-button__icon use');
-
   audio.addEventListener('ended', () => {
     audio.currentTime = 0;
     audio.play();
