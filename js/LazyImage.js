@@ -1,11 +1,11 @@
 (() => {
-    const LazyImage = {
-        elements_selector: ".lazy"
-    };
+  const LazyImage = {
+    elements_selector: '.lazy',
+  };
 
-    if (!document.lazyLoadInstance) {
-        document.lazyLoadInstance = new LazyLoad(LazyImage);
-    }
+  if (!document.lazyLoadInstance) {
+    document.lazyLoadInstance = new LazyLoad(LazyImage);
+  }
 
-    document.lazyLoadInstance.update();
+  document.lazyLoadInstance.update();
 })();

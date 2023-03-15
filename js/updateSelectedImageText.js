@@ -5,7 +5,7 @@ const selectedImageText = document.querySelector('#selected-image-text');
 const updateSelectedImageText = () => {
   // Получаем ссылку на выбранное изображение
   const selectedImage = document.querySelector('.gallery__image:not(.hidden)');
-  
+
   // Если изображение выбрано
   if (selectedImage) {
     // Получаем текст альтернативного описания изображения
@@ -20,7 +20,7 @@ const updateSelectedImageText = () => {
         selectedImageText.style.opacity = 1;
       }, 300);
     }
-  // Если изображение не выбрано
+    // Если изображение не выбрано
   } else {
     // Плавно скрываем текст
     selectedImageText.style.opacity = 0;
