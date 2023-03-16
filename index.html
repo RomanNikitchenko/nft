@@ -108,7 +108,7 @@
 
 
                         <div class="gallery">
-                            <img data-src="./images/Doodlcolors-min.gif" src="./images/422x422-1.png" class="image gallery__image hidden lazy" data-id="1"
+                            <img data-src="./images/Doodlcolors-min.gif" src="./images/422x422-1.png" class="image gallery__image hidden" data-id="1"
                                 alt="Free mint: collect and conquer." id="gif-img">
                             <picture>
                                 <source media="(min-width: 1300px)" data-srcset="./images/422x422-2.png 1x, ./images/422x422-2.png 2x" />
@@ -224,35 +224,35 @@
     <script src="js/playPauseButton.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var gifImg = document.getElementById("gif-img"); // выбираем изображение
-            var progressBar = document.getElementById("progress-bar"); // выбираем индикатор прогресса
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", gifImg.getAttribute("data-src"), true);
-            xhr.responseType = "arraybuffer";
-            // создание слушателя прогресса загрузки
-            xhr.addEventListener("progress", function (evt) {
-                if (evt.lengthComputable) {
-                    var percentComplete = evt.loaded / evt.total;
-                    // обновляем индикатор прогресса
-                    progressBar.style.width = percentComplete * 100 + "%";
-                }
-            }, false);
-            xhr.onload = function () {
-                if (this.status === 200) {
-                    // если загрузка прошла успешно, заменяем статичное изображение на гиф
-                    // var blob = new Blob([this.response], { type: "image/gif" });
-                    // var url = URL.createObjectURL(blob);
-                    // gifImg.src = url;
-                    // gifImg.classList.remove("lazy");
-                    // скрываем индикатор с задержкой в 1 секунду
-                    setTimeout(function () {
-                        progressBar.style.opacity = "0";
-                    }, 250);
-                }
-            };
-            xhr.send();
-        });
+        var gifImg = document.getElementById("gif-img"); // выбираем изображение
+        var progressBar = document.getElementById("progress-bar"); // выбираем индикатор прогресса
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", gifImg.getAttribute("data-src"), true);
+        xhr.responseType = "arraybuffer";
+
+        // создание слушателя прогресса загрузки
+        xhr.addEventListener("progress", function (evt) {
+            if (evt.lengthComputable) {
+                var percentComplete = evt.loaded / evt.total;
+                // обновляем индикатор прогресса
+                progressBar.style.width = percentComplete * 100 + "%";
+            }
+        }, false);
+
+        xhr.onload = function () {
+            if (this.status === 200) {
+                // если загрузка прошла успешно, заменяем статичное изображение на гиф
+                var blob = new Blob([this.response], { type: "image/gif" });
+                var url = URL.createObjectURL(blob);
+                gifImg.src = url;
+                // скрываем индикатор с задержкой в 1 секунду
+                setTimeout(function () {
+                    progressBar.style.opacity = "0";
+                }, 250);
+            }
+        };
+        
+        xhr.send();
     </script>
 </body>
 
