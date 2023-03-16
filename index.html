@@ -224,35 +224,33 @@
     <script src="js/playPauseButton.js"></script>
 
     <script>
-        var gifImg = document.getElementById("gif-img"); // выбираем изображение
-        var progressBar = document.getElementById("progress-bar"); // выбираем индикатор прогресса
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", gifImg.getAttribute("data-src"), true);
-        xhr.responseType = "arraybuffer";
+        document.addEventListener("DOMContentLoaded", function () {
+            var gifImg = document.getElementById("gif-img");
+            var progressBar = document.getElementById("progress-bar");
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", gifImg.getAttribute("data-src"), true);
+            xhr.responseType = "arraybuffer";
 
-        // создание слушателя прогресса загрузки
-        xhr.addEventListener("progress", function (evt) {
-            if (evt.lengthComputable) {
-                var percentComplete = evt.loaded / evt.total;
-                // обновляем индикатор прогресса
-                progressBar.style.width = percentComplete * 100 + "%";
-            }
-        }, false);
+            xhr.addEventListener("progress", function (evt) {
+                if (evt.lengthComputable) {
+                    var percentComplete = evt.loaded / evt.total;
+                    progressBar.style.width = percentComplete * 100 + "%";
+                }
+            }, false);
 
-        xhr.onload = function () {
-            if (this.status === 200) {
-                // если загрузка прошла успешно, заменяем статичное изображение на гиф
-                var blob = new Blob([this.response], { type: "image/gif" });
-                var url = URL.createObjectURL(blob);
-                gifImg.src = url;
-                // скрываем индикатор с задержкой в 1 секунду
-                setTimeout(function () {
-                    progressBar.style.opacity = "0";
-                }, 250);
-            }
-        };
-        
-        xhr.send();
+            xhr.onload = function () {
+                if (this.status === 200) {
+                    var blob = new Blob([this.response], { type: "image/gif" });
+                    var url = URL.createObjectURL(blob);
+                    gifImg.src = url;
+                    setTimeout(function () {
+                        progressBar.style.opacity = "0";
+                    }, 250);
+                }
+            };
+
+            xhr.send();
+        });
     </script>
 </body>
 
