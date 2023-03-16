@@ -343,6 +343,19 @@ body {
   }
 }
 
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 0%;
+  height: 5px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#F9DAB3), color-stop(#FFF398), color-stop(#FEB9F1), color-stop(#D0C3FF), to(#C8F3AC));
+  background-image: linear-gradient(to right, #F9DAB3, #FFF398, #FEB9F1, #D0C3FF, #C8F3AC);
+  -webkit-transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
 .page-header {
   padding-top: 48px;
 }
