@@ -1,14 +1,14 @@
 (() => {
   const images = document.querySelectorAll('.box img');
 
-  var currentIndex = 0;
-  var isAnimating = false;
-  var screenWidth = window.innerWidth;
+  let currentIndex = 0;
+  let isAnimating = false;
+  let screenWidth = window.innerWidth;
 
   const scaleTarget = () => {
     screenWidth = window.innerWidth;
 
-    for (var i = 0; i < images.length; i++) {
+    for (let i = 0; i < images.length; i += 1) {
       images[i].classList.remove('small', 'medium', 'large');
     }
 
@@ -23,14 +23,14 @@
     } else if (screenWidth >= 768 && screenWidth <= 1299) {
       const classes = ['medium', 'large', 'large', 'medium', 'small', 'small'];
       const imagesCount = images.length;
-      for (let i = 0; i < imagesCount; i++) {
+      for (let i = 0; i < imagesCount; i += 1) {
         const index = (i + currentIndex) % imagesCount;
         images[index].classList.add(classes[i]);
       }
     } else if (screenWidth >= 1300) {
       const classes = ['medium', 'large', 'large', 'medium', 'small', 'small'];
       const imagesCount = images.length;
-      for (let i = 0; i < imagesCount; i++) {
+      for (let i = 0; i < imagesCount; i += 1) {
         const index = (i + currentIndex) % imagesCount;
         images[index].classList.add(classes[i]);
       }

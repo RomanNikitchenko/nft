@@ -9,9 +9,9 @@
     audio.play();
   });
 
-  var isPlaying = false;
+  let isPlaying = false;
   let userHasInteracted = false;
-  var screenWidth = window.innerWidth;
+  let screenWidth = window.innerWidth;
 
   playPauseButton.addEventListener('click', () => {
     isPlaying = true;

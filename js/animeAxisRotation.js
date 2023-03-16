@@ -1,51 +1,51 @@
 (() => {
-  var isAnimating = false;
-  var limit = 1;
+  let isAnimating = false;
+  let limit = 1;
 
   //anime.js
-  var path1 = anime.path('#svg_1');
-  var path2 = anime.path('#svg_2');
-  var path3 = anime.path('#svg_3');
-  var path4 = anime.path('#svg_4');
-  var path5 = anime.path('#svg_5');
-  var path6 = anime.path('#svg_6');
+  let path1 = anime.path('#svg_1');
+  let path2 = anime.path('#svg_2');
+  let path3 = anime.path('#svg_3');
+  let path4 = anime.path('#svg_4');
+  let path5 = anime.path('#svg_5');
+  let path6 = anime.path('#svg_6');
 
-  var motionMave1 = anime({
+  let motionMave1 = anime({
     targets: '.target-1',
     translateX: path1('x'),
     translateY: path1('y'),
     autoplay: false,
   });
 
-  var motionMave2 = anime({
+  let motionMave2 = anime({
     targets: '.target-2',
     translateX: path2('x'),
     translateY: path2('y'),
     autoplay: false,
   });
 
-  var motionMave3 = anime({
+  let motionMave3 = anime({
     targets: '.target-3',
     translateX: path3('x'),
     translateY: path3('y'),
     autoplay: false,
   });
 
-  var motionMave4 = anime({
+  let motionMave4 = anime({
     targets: '.target-4',
     translateX: path4('x'),
     translateY: path4('y'),
     autoplay: false,
   });
 
-  var motionMave5 = anime({
+  let motionMave5 = anime({
     targets: '.target-5',
     translateX: path5('x'),
     translateY: path5('y'),
     autoplay: false,
   });
 
-  var motionMave6 = anime({
+  let motionMave6 = anime({
     targets: '.target-6',
     translateX: path6('x'),
     translateY: path6('y'),
@@ -84,7 +84,7 @@
       '.target-6',
       '.target-1',
     ];
-    for (var i = 0; i < targetClasses.length; i++) {
+    for (let i = 0; i < targetClasses.length; i++) {
       if (limit === i + 1) {
         callback(motionMave1, targetClasses[i], path1);
         callback(motionMave2, targetClasses[(i + 1) % 6], path2);

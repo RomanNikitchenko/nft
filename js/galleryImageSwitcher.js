@@ -3,28 +3,28 @@ import { updateSelectedImageText } from './updateSelectedImageText.js';
 (() => {
   const images = document.querySelectorAll('.gallery__image');
 
-  var currentIndex = 0;
-  var isAnimating = false;
+  let currentIndex = 0;
+  let isAnimating = false;
 
   // Скрыть все изображения, кроме первого
   images[currentIndex].classList.remove('hidden');
 
   const switchImages = (imageMini = null) => {
-      // Скрыть текущее изображение
-      images[currentIndex].classList.add('hidden');
+    // Скрыть текущее изображение
+    images[currentIndex].classList.add('hidden');
 
-      //выбраная картинка становится в центр
-      if (imageMini) {
-        currentIndex = imageMini - 1;
-        images[currentIndex].classList.remove('hidden');
-      } else {
-        // Показать следующее изображение
-        currentIndex = (currentIndex + 1) % images.length;
-        images[currentIndex].classList.remove('hidden');
-      }
+    //выбраная картинка становится в центр
+    if (imageMini) {
+      currentIndex = imageMini - 1;
+      images[currentIndex].classList.remove('hidden');
+    } else {
+      // Показать следующее изображение
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.remove('hidden');
+    }
 
-      // Обновить содержимое блока с текстом выбранного изображения
-      updateSelectedImageText();
+    // Обновить содержимое блока с текстом выбранного изображения
+    updateSelectedImageText();
   };
 
   // Обновить содержимое блока с текстом выбранного изображения
@@ -32,10 +32,10 @@ import { updateSelectedImageText } from './updateSelectedImageText.js';
 
   // Добавить обработчик кликов на кнопку
   const handleImageClick = e => {
-    if (isAnimating) return
+    if (isAnimating) return;
 
     isAnimating = true;
-    
+
     if (e.target.classList.contains('mini-image')) {
       const imageMini = e.target.dataset.mini;
       switchImages(imageMini);
@@ -43,7 +43,7 @@ import { updateSelectedImageText } from './updateSelectedImageText.js';
 
     if (e.target.classList.contains('gallery__image')) {
       switchImages();
-    };
+    }
 
     setTimeout(() => {
       isAnimating = false;
@@ -54,7 +54,7 @@ import { updateSelectedImageText } from './updateSelectedImageText.js';
   window.addEventListener('touchstart', handleImageClick);
 
   const scrollswitchImages = () => {
-    if (isAnimating) return
+    if (isAnimating) return;
 
     isAnimating = true;
 

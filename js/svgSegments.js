@@ -1,8 +1,8 @@
 (() => {
   // Функция для перезаписи SVG на новый
   function redrawSVG() {
-    var screenWidth = window.innerWidth;
-    var svgWidth, svgHeight, pathD;
+    let screenWidth = window.innerWidth;
+    let svgWidth, svgHeight, pathD;
 
     // Определение ширины, высоты и path для каждого экрана
     if (screenWidth <= 767) {
@@ -38,7 +38,7 @@
     }
 
     // Создание нового SVG
-    var s = Snap('#svg-container');
+    let s = Snap('#svg-container');
     s.attr({
       width: svgWidth,
       height: svgHeight,
@@ -46,7 +46,7 @@
     });
 
     // Создание нового path
-    var path = s.select('#svg_path');
+    let path = s.select('#svg_path');
     path.attr({
       stroke: patStroke,
       'stroke-width': patStrokeWidth,
@@ -55,10 +55,10 @@
     });
 
     // Получение общей длины path
-    var pathLength = Snap.path.getTotalLength(path);
+    let pathLength = Snap.path.getTotalLength(path);
 
     // Разбиение path на 6 сегментов
-    var segmentLengths = [];
+    let segmentLengths = [];
 
     if (screenWidth <= 767) {
       // Для экранов шириной до 767 пикселей (мобильные)
@@ -93,24 +93,24 @@
     }
 
     // Получение начала и конца каждого сегмента
-    var segmentStartsAndEnds = [];
-    var segmentStart = 0;
-    for (var i = 0; i < segmentLengths.length; i++) {
-      var segmentEnd = segmentStart + segmentLengths[i];
+    let segmentStartsAndEnds = [];
+    let segmentStart = 0;
+    for (let i = 0; i < segmentLengths.length; i += 1) {
+      let segmentEnd = segmentStart + segmentLengths[i];
       segmentStartsAndEnds.push([segmentStart, segmentEnd]);
       segmentStart = segmentEnd;
     }
 
     // Создание новых path для каждого сегмента
-    for (var i = 0; i < segmentStartsAndEnds.length; i++) {
+    for (let i = 0; i < segmentStartsAndEnds.length; i += 1) {
       // Получаем элемент path текущего сегмента, если он уже существует
-      var segmentPath = s.select(`#svg_${i + 1}`);
+      let segmentPath = s.select(`#svg_${i + 1}`);
       // Если элемент path уже существует, то удаляем его
       if (segmentPath) {
         segmentPath.remove();
       }
       // Создаем новый элемент path для текущего сегмента
-      var segment = Snap.path.getSubpath(
+      let segment = Snap.path.getSubpath(
         path,
         segmentStartsAndEnds[i][0],
         segmentStartsAndEnds[i][1],
