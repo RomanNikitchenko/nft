@@ -11,7 +11,9 @@
 </head>
 
 <body class="page" loading="lazy">
-    <div id="progress-bar"></div>
+    <div class="progress-bar">
+        <div class="loading-line"></div>
+    </div>
     <!--верхняя линия хедер-->
     <header class="page-header">
         <div class="conteiner page-header__conteiner">
@@ -109,13 +111,13 @@
 
                         <div class="gallery">
                             <img data-src="./images/Doodlcolors-min.gif" src="./images/422x422-1.png" class="image gallery__image hidden" data-id="1"
-                                alt="Free mint: collect and conquer." id="gif-img">
+                                alt="Free mint: collect and conquer.">
                             <picture>
                                 <source media="(min-width: 1300px)" data-srcset="./images/422x422-2.png 1x, ./images/422x422-2.png 2x" />
                                 <source media="(min-width: 768px)" data-srcset="./images/422x422-2.png 1x, ./images/422x422-2.png 2x" />
                                 <source media="(max-width: 767px)" data-srcset="./images/320x320-2.png 1x, ./images/320x320-2.png 2x" />
 
-                                <img data-src="./images/320x320-2.png" src="./images/150x150-2.png" class="image gallery__image hidden lazy"
+                                <img data-src="./images/320x320-2.png" src="./images/150x150-2.png" class="image gallery__image hidden"
                                     data-id="2" alt="Discover rare NFTs for 0.00 ETH.">
                             </picture>
                             <picture>
@@ -123,7 +125,7 @@
                                 <source media="(min-width: 768px)" data-srcset="./images/422x422-3.png 1x, ./images/422x422-3.png 2x" />
                                 <source media="(max-width: 767px)" data-srcset="./images/320x320-3.png 1x, ./images/320x320-3.png 2x" />
                             
-                                <img data-src="./images/320x320-3.png" src="./images/150x150-3.png" class="image gallery__image hidden lazy"
+                                <img data-src="./images/320x320-3.png" src="./images/150x150-3.png" class="image gallery__image hidden"
                                     data-id="3" alt="Check Discord for utilities!">
                             </picture>
                             <picture>
@@ -131,7 +133,7 @@
                                 <source media="(min-width: 768px)" data-srcset="./images/422x422-4.png 1x, ./images/422x422-4.png 2x" />
                                 <source media="(max-width: 767px)" data-srcset="./images/320x320-4.png 1x, ./images/320x320-4.png 2x" />
                             
-                                <img data-src="./images/320x320-4.png" src="./images/150x150-4.png" class="image gallery__image hidden lazy"
+                                <img data-src="./images/320x320-4.png" src="./images/150x150-4.png" class="image gallery__image hidden"
                                     data-id="4" alt="Team of Web3 builders!">
                             </picture>
                             <picture>
@@ -139,7 +141,7 @@
                                 <source media="(min-width: 768px)" data-srcset="./images/422x422-5.png 1x, ./images/422x422-5.png 2x" />
                                 <source media="(max-width: 767px)" data-srcset="./images/320x320-5.png 1x, ./images/320x320-5.png 2x" />
                             
-                                <img data-src="./images/320x320-5.png" src="./images/150x150-5.png" class="image gallery__image hidden lazy"
+                                <img data-src="./images/320x320-5.png" src="./images/150x150-5.png" class="image gallery__image hidden"
                                     data-id="5" alt="Escape the draining cycle.">
                             </picture>
                             <picture>
@@ -147,7 +149,7 @@
                                 <source media="(min-width: 768px)" data-srcset="./images/422x422-6.png 1x, ./images/422x422-6.png 2x" />
                                 <source media="(max-width: 767px)" data-srcset="./images/320x320-6.png 1x, ./images/320x320-6.png 2x" />
                             
-                                <img data-src="./images/320x320-6.png" src="./images/150x150-6.png" class="image gallery__image hidden lazy"
+                                <img data-src="./images/320x320-6.png" src="./images/150x150-6.png" class="image gallery__image hidden"
                                     data-id="6" alt="The journey begins on ETH.">
                             </picture>
                         </div>
@@ -207,6 +209,7 @@
 
     <audio id="my-audio" src="./audio/[YT2mp3.info] - Counting Stars (256kbps).mp3"></audio>
 
+    
     <!-- Подключение Snap.svg через CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
     
@@ -222,36 +225,8 @@
     <script src="js/scaleTarget.js"></script>
     <script type="module" src="js/galleryImageSwitcher.js"></script>
     <script src="js/playPauseButton.js"></script>
+    <script src="js/progressBar.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var gifImg = document.getElementById("gif-img");
-            var progressBar = document.getElementById("progress-bar");
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", gifImg.getAttribute("data-src"), true);
-            xhr.responseType = "arraybuffer";
-
-            xhr.addEventListener("progress", function (evt) {
-                if (evt.lengthComputable) {
-                    var percentComplete = evt.loaded / evt.total;
-                    progressBar.style.width = percentComplete * 100 + "%";
-                }
-            }, false);
-
-            xhr.onload = function () {
-                if (this.status === 200) {
-                    var blob = new Blob([this.response], { type: "image/gif" });
-                    var url = URL.createObjectURL(blob);
-                    gifImg.src = url;
-                    setTimeout(function () {
-                        progressBar.style.opacity = "0";
-                    }, 250);
-                }
-            };
-
-            xhr.send();
-        });
-    </script>
 </body>
 
 </html>
