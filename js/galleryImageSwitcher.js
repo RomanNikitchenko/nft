@@ -32,6 +32,8 @@ import { updateSelectedImageText } from './updateSelectedImageText.js';
 
   // Добавить обработчик кликов на кнопку
   const handleImageClick = e => {
+    if (!e.target.classList.contains('image')) return;
+
     if (isAnimating) return;
 
     isAnimating = true;
