@@ -23,13 +23,13 @@ body {
     }
 }
 
-// #progress-bar {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     opacity: 1;
-//     width: 0%;
-//     height: 5px;
-//     background-image: linear-gradient(to right, #F9DAB3, #FFF398, #FEB9F1, #D0C3FF, #C8F3AC);
-//     transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
-// }
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    width: 0%;
+    height: 5px;
+    background-image: linear-gradient(to right, #F9DAB3, #FFF398, #FEB9F1, #D0C3FF, #C8F3AC);
+    transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
